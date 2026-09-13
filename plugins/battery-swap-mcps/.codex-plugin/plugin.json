@@ -1,7 +1,9 @@
 {
   "name": "battery-swap-mcps",
-  "version": "0.1.0+codex.20260908092254",
+  "version": "0.1.0+codex.20260913073314",
   "description": "Install every BatterySwap MCP definition together.",
+  "homepage": "https://github.com/abdulrhmanalhur/battery-swap-marketplace",
+  "repository": "https://github.com/abdulrhmanalhur/battery-swap-marketplace",
   "author": {
     "name": "BatterySwap"
   },
@@ -25,6 +27,8 @@
       "Vercel",
       "WordPress"
     ],
-    "defaultPrompt": "Use the connected BatterySwap MCP tools. Prefer read-only calls unless I explicitly request a change."
+    "defaultPrompt": [
+      "Use the connected BatterySwap MCP tools. Prefer read-only calls unless I explicitly request a change."
+    ]
   }
 }
