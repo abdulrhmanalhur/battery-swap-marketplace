@@ -1,0 +1,92 @@
+{
+  "mcpServers": {
+    "advertisement": {
+      "type": "http",
+      "url": "https://advertisement.batteryswap.cc/mcp",
+      "startup_timeout_sec": 30,
+      "tool_timeout_sec": 120,
+      "required": false
+    },
+    "google_merchant_center": {
+      "type": "http",
+      "url": "https://mcpgooads.batteryswap.cc/gmc/mcp",
+      "startup_timeout_sec": 30,
+      "tool_timeout_sec": 120,
+      "required": false
+    },
+    "google_ads": {
+      "type": "http",
+      "url": "https://mcpgooads.batteryswap.cc/mcp",
+      "auth": "oauth",
+      "startup_timeout_sec": 30,
+      "tool_timeout_sec": 120,
+      "required": false
+    },
+    "google_tag_manager": {
+      "type": "http",
+      "url": "https://gtm-mcp.stape.ai/mcp",
+      "auth": "oauth",
+      "startup_timeout_sec": 30,
+      "tool_timeout_sec": 120,
+      "required": false
+    },
+    "google_business_profile": {
+      "type": "http",
+      "url": "https://mcpgooads.batteryswap.cc/gbp/mcp",
+      "startup_timeout_sec": 30,
+      "tool_timeout_sec": 120,
+      "required": false
+    },
+    "google_search_console": {
+      "type": "http",
+      "url": "https://mcpgooads.batteryswap.cc/gsc/mcp",
+      "startup_timeout_sec": 30,
+      "tool_timeout_sec": 120,
+      "required": false
+    },
+    "mongodb": {
+      "type": "http",
+      "url": "https://mcpgooads.batteryswap.cc/mongodb/mcp",
+      "startup_timeout_sec": 30,
+      "tool_timeout_sec": 120,
+      "required": false
+    },
+    "n8n_mcp": {
+      "type": "http",
+      "url": "https://mcpgooads.batteryswap.cc/N8NMCP/mcp",
+      "startup_timeout_sec": 30,
+      "tool_timeout_sec": 120,
+      "required": false
+    },
+    "n8n_instance": {
+      "type": "http",
+      "url": "https://n8n.batteryswap.cc/mcp-server/http",
+      "bearer_token_env_var": "N8N_MCP_BEARER_TOKEN",
+      "startup_timeout_sec": 30,
+      "tool_timeout_sec": 120,
+      "required": false
+    },
+    "aws_s3": {
+      "type": "http",
+      "url": "https://mcpgooads.batteryswap.cc/s3/mcp",
+      "startup_timeout_sec": 30,
+      "tool_timeout_sec": 120,
+      "required": false
+    },
+    "vercel": {
+      "type": "http",
+      "url": "https://mcp.vercel.com",
+      "auth": "oauth",
+      "startup_timeout_sec": 30,
+      "tool_timeout_sec": 120,
+      "required": false
+    },
+    "wordpress": {
+      "type": "http",
+      "url": "https://mcpgooads.batteryswap.cc/wp/mcp",
+      "startup_timeout_sec": 30,
+      "tool_timeout_sec": 120,
+      "required": false
+    }
+  }
+}
