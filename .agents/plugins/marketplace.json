@@ -1,0 +1,20 @@
+{
+  "name": "battery-swap",
+  "interface": {
+    "displayName": "Battery Swap"
+  },
+  "plugins": [
+    {
+      "name": "battery-swap-mcps",
+      "source": {
+        "source": "local",
+        "path": "./plugins/battery-swap-mcps"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
