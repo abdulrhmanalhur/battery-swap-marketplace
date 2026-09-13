@@ -1,0 +1,30 @@
+{
+  "name": "battery-swap-mcps",
+  "version": "0.1.0+codex.20260908092254",
+  "description": "Install every BatterySwap MCP definition together.",
+  "author": {
+    "name": "BatterySwap"
+  },
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "BatterySwap MCP Suite",
+    "shortDescription": "All BatterySwap MCPs in one install",
+    "longDescription": "Connects Codex to all requested BatterySwap and supporting remote MCP definitions through one installable plugin. Optional servers cannot block healthy siblings, and credentials remain stored on each device.",
+    "developerName": "BatterySwap",
+    "category": "Productivity",
+    "capabilities": [
+      "Advertisement",
+      "Google Merchant Center",
+      "Google Ads",
+      "Google Tag Manager",
+      "Google Business Profile",
+      "Google Search Console",
+      "MongoDB",
+      "n8n MCP and n8n instance",
+      "AWS S3",
+      "Vercel",
+      "WordPress"
+    ],
+    "defaultPrompt": "Use the connected BatterySwap MCP tools. Prefer read-only calls unless I explicitly request a change."
+  }
+}
