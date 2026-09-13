@@ -1,0 +1,37 @@
+name: Validate marketplace
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate JSON and marketplace structure
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path('.')
+          marketplace = json.loads((root / '.agents/plugins/marketplace.json').read_text())
+          manifest = json.loads((root / 'plugins/battery-swap-mcps/.codex-plugin/plugin.json').read_text())
+          mcps = json.loads((root / 'plugins/battery-swap-mcps/.mcp.json').read_text())
+
+          assert marketplace['name'] == 'battery-swap'
+          assert manifest['name'] == 'battery-swap-mcps'
+          assert manifest['mcpServers'] == './.mcp.json'
+          assert marketplace['plugins'][0]['source']['path'] == './plugins/battery-swap-mcps'
+          assert mcps['mcpServers']
+          for name, server in mcps['mcpServers'].items():
+              assert server.get('type') == 'http', name
+              assert server.get('url', '').startswith('https://'), name
+              assert server.get('required') is False, name
+          PY
