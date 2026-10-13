@@ -35,3 +35,7 @@ jobs:
               assert server.get('url', '').startswith('https://'), name
               assert server.get('required') is False, name
           PY
+      - name: Validate Atlas reader with synthetic data
+        run: |
+          python3 -m pip install -r plugins/battery-swap-mcps/services/atlas-monitor/requirements.txt
+          python3 -m unittest discover -s plugins/battery-swap-mcps/services/atlas-monitor/tests -v

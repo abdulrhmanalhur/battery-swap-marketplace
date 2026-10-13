@@ -30,5 +30,6 @@
     "defaultPrompt": [
       "Use the connected BatterySwap MCP tools. Prefer read-only calls unless I explicitly request a change."
     ]
-  }
+  },
+  "skills": "./skills/"
 }

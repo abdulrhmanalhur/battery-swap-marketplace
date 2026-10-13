@@ -47,3 +47,13 @@ codex plugin add battery-swap-mcps@battery-swap
 ```
 
 Do not commit OAuth tokens, API keys, database connection strings, or static Authorization headers. The plugin transports MCP configuration only; each device stores its own credentials.
+
+## Atlas diagnostics candidate
+
+The bundled `atlas-diagnose` skill reuses the existing MongoDB MCP metadata and
+alert tools. The new restricted CONNECTIONS reader is prepared in
+[`services/atlas-monitor`](plugins/battery-swap-mcps/services/atlas-monitor/SETUP.md).
+It is a tested local candidate, not an installed or deployed remote server.
+The current MCP route definitions are unchanged. Private credential setup and
+one historical Atlas read succeeded. Permanent activation is authorized, but
+a registered publication provider and verified client transport remain missing.
