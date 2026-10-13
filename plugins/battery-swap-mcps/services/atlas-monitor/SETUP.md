@@ -5,7 +5,8 @@
 Authoritative source: `abdulrhmanalhur/battery-swap-marketplace`, baseline
 `ca280293679060f26c3921e8e177a29b672314b4`, branch `feat/atlas-connections-reader`.
 Development and tests run in an isolated local checkout outside Drive.
-The candidate is not pushed, deployed, installed or enabled in the suite.
+The source branch is published for review. The reader is not deployed, installed
+or enabled in the suite.
 The existing twelve MCP definitions remain unchanged.
 
 The user chose and privately saved a traditional project-only read API key.
