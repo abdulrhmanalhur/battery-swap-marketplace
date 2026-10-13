@@ -1,0 +1,40 @@
+[Unit]
+Description=BatterySwap restricted Atlas connections MCP
+After=network-online.target
+Wants=network-online.target
+StartLimitIntervalSec=60
+StartLimitBurst=3
+
+[Service]
+Type=simple
+DynamicUser=yes
+WorkingDirectory=/opt/batteryswap-atlas-mcp
+ExecStart=/var/lib/batteryswap-atlas-runtime/6562ded3c2a4dae20b5d3eb9561936399a10b77c8208fe609331dfb106be97b3/bin/python3 /opt/batteryswap-atlas-mcp/http_server.py
+Environment=ATLAS_MONITOR_AUTH_MODE=api_key
+Environment=FASTMCP_HOME=/var/lib/batteryswap-atlas-monitor
+LoadCredential=atlas_public_key:/etc/batteryswap-atlas-monitor/api-public-key
+LoadCredential=atlas_private_key:/etc/batteryswap-atlas-monitor/api-private-key
+LoadCredential=github_client_id:/etc/batteryswap-atlas-monitor/github-oauth/client-id
+LoadCredential=github_client_secret:/etc/batteryswap-atlas-monitor/github-oauth/client-secret
+StateDirectory=batteryswap-atlas-monitor
+StateDirectoryMode=0700
+UMask=0077
+NoNewPrivileges=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectSystem=strict
+ProtectHome=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictSUIDSGID=yes
+LockPersonality=yes
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+MemoryMax=256M
+TasksMax=48
+TimeoutStopSec=10
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
