@@ -102,3 +102,47 @@ References: [Atlas API access](https://www.mongodb.com/docs/atlas/configure-api-
 [authentication](https://www.mongodb.com/docs/atlas/api/api-authentication/),
 [measurements](https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/operation/operation-getgroupprocessmeasurements),
 [Codex MCP transports](https://learn.chatgpt.com/docs/extend/mcp).
+
+
+## Authorized OAuth implementation and closed bootstrap
+
+The owner subsequently approved the limited devhub source/service publication
+policy and a separate GitHub OAuth App, BatterySwap Atlas Reader. The application
+source now includes owner_auth.py and http_server.py. GitHub scope is explicitly
+empty, identity verification accepts numeric owner ID108840765 only, and local
+MCP permission is atlas:connections:read with a resource-bound signed token.
+Local mock tests cover OAuth/PKCE, wrong owner/audience/scope, rotating local
+refresh, metadata/tool discovery, body limits and the initial registry policy.
+This is not a successful real-user OAuth login or deployment claim.
+
+GitHub app creation remains user-assisted because no supported browser/app-creation
+tool is exposed. Client ID and Client Secret are privately entered by the owner
+only after the app is created. The destination github-oauth under the private
+Atlas directory has been prepared; never restart entry or overwrite nonempty
+files automatically. No new input window may be opened until the user is ready.
+
+The root-only deploy/bootstrap_admin.py imports one exact Git-backed frozen source
+bundle under the installed workflow activation lock and preserves every existing
+registry row. It records only atlas-monitor, a four-file publication allowlist,
+read-only AGENTS.md instructions and the fixed batteryswap-atlas-monitor.service.
+Dependencies, units, admin code and secret state are outside that allowlist.
+Initial readiness is snapshot=true and publish=false. The existing administrative
+verify_projects.py enable gate requires an active healthy provider; it cannot be
+bypassed merely because publication was authorized. Enable only after private
+credential setup, loopback runtime health and fresh provider verification.
+
+The fixed unit runs DynamicUser with root-loaded credentials, private state and
+an immutable isolated Linux wheel runtime. It starts neither during registration
+nor without completed private credentials. The public gateway is not modified
+by this bootstrap. Gateway installation must add only the exact Atlas resource,
+callback and discovery routes after authenticating transport is verified, with
+OAuth access/query logging disabled. Preserve existing routes and a protected
+configuration backup. Never reuse a hidden URL as authentication or reuse the
+Google Ads consent-only authorization implementation.
+
+Rollback first disables the new optional suite entry, closes only Atlas routes,
+and stops only the new service; restore an affected configuration only after a
+hash/CAS check so newer unrelated changes remain intact. Keep protected source,
+registration journals and credential files. Source changes after initial import
+use the ordinary registered workflow with its backups and provider validation.
+No direct app-source replacement or reset is authorized by the bootstrap.
