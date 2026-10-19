@@ -40,6 +40,12 @@ class MongoReaderTests(unittest.TestCase):
         self.assertEqual(self.client.get_database.call_args.args,("test",))
         reader.close();self.client.close.assert_called_once()
 
+    def test_uri_without_query_is_valid_on_python310_and_newer(self):
+        self.assertIsNone(validate_uri(URI.split("?",1)[0]))
+        self.assertIsNone(validate_uri(URI.split("?",1)[0]+"?"))
+        for query in ("authSource=admin&", "&", "tls=false", "authSource=admin&authSource=admin"):
+            with self.assertRaises(Denied):validate_uri(URI.split("?",1)[0]+"?"+query)
+
     def test_uri_rejects_other_database_host_options_and_tls_bypass(self):
         for uri in (URI.replace("/test?","/other?"),URI+"&tls=false",URI.replace("mongodb+srv:","mongodb:"),
                     URI.replace("cluster.fixture.mongodb.net","localhost"),URI+"#fragment",URI+"&directConnection=true"):

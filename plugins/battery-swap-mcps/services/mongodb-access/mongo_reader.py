@@ -24,7 +24,7 @@ def validate_uri(uri):
                 or not re.fullmatch(r"[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)*\.mongodb\.net", parsed.hostname or "")
                 or parsed.fragment or any(c in uri for c in "\r\n\0")):
             raise ValueError()
-        options = parse_qsl(parsed.query, strict_parsing=True)
+        options = parse_qsl(parsed.query, strict_parsing=True) if parsed.query else []
         if any(k != "authSource" or v != "admin" for k, v in options) or len(options) > 1:
             raise ValueError()
     except (TypeError, ValueError):
