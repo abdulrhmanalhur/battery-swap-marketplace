@@ -1,0 +1,5 @@
+fastmcp==3.2.4
+PyJWT==2.15.1
+cryptography>=45.0.1,<51
+pymongo==4.17.0
+dnspython==2.8.0

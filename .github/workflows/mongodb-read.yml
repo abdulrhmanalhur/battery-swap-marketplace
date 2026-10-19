@@ -1,0 +1,25 @@
+name: Validate MongoDB read service
+on:
+  pull_request:
+    paths:
+      - plugins/battery-swap-mcps/services/mongodb-access/**
+      - .github/workflows/mongodb-read.yml
+  push:
+    branches: [main]
+    paths:
+      - plugins/battery-swap-mcps/services/mongodb-access/**
+      - .github/workflows/mongodb-read.yml
+permissions:
+  contents: read
+jobs:
+  read-policy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install pinned Linux runtime
+        run: python -m pip install --require-hashes -r plugins/battery-swap-mcps/services/mongodb-access/linux-runtime-requirements.lock
+      - name: Test isolated read runtime and policy
+        run: python -m unittest discover -s plugins/battery-swap-mcps/services/mongodb-access/tests -v
