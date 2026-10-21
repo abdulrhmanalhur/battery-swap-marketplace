@@ -2,7 +2,7 @@ name: Synthetic edit-only MongoDB tests
 on:
   push:
     branches: ['test/synthetic-edit-only-20261021']
-    paths: ['tests/synthetic-edit-only/**', '.github/workflows/synthetic-edit-only.yml']
+    paths: ['tests/synthetic-edit-only/**', 'tests/banner-mongoose-integration/**', '.github/workflows/synthetic-edit-only.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -40,6 +40,13 @@ jobs:
       - name: Run real transactions concurrency process and server crashes
         working-directory: tests/synthetic-edit-only/integration
         run: /tmp/synthetic-venv/bin/python -B -m unittest discover -v
+      - name: Test exact Banner Mongoose adapter and recovery
+        working-directory: tests/banner-mongoose-integration
+        run: |
+          node --version
+          npm ci --ignore-scripts
+          npm run build
+          npm test
       - name: Print synthetic database diagnostics on failure
         if: failure()
         run: docker logs --tail 100 synthetic-edit-mongo || true

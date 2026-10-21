@@ -1,0 +1,16 @@
+{
+  "name": "synthetic-banner-mongoose-tests",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node tools/esm-fix.cjs",
+    "test": "node --test build/tests/mongoose-integration.test.js"
+  },
+  "dependencies": {
+    "mongoose": "8.24.4"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "@types/node": "20.19.43"
+  }
+}
