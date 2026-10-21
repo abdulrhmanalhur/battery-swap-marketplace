@@ -1,0 +1,48 @@
+name: Synthetic edit-only MongoDB tests
+on:
+  push:
+    branches: ['test/synthetic-edit-only-*']
+    paths: ['tests/synthetic-edit-only/**', '.github/workflows/synthetic-edit-only.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  isolated-mongodb:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      SYNTHETIC_CI_CONTAINER: synthetic-edit-mongo
+    steps:
+      - name: Fetch exact public test commit without credentials
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init .
+          git fetch --depth=1 https://github.com/abdulrhmanalhur/battery-swap-marketplace.git "$GITHUB_SHA"
+          git checkout --detach FETCH_HEAD
+      - name: Install pinned PyPI driver in disposable runner
+        run: |
+          python3 -m venv /tmp/synthetic-venv
+          /tmp/synthetic-venv/bin/pip install --index-url https://pypi.org/simple pymongo==4.19.0 dnspython==2.9.0
+      - name: Start digest-pinned official MongoDB on loopback only
+        run: |
+          docker run -d --name synthetic-edit-mongo --label purpose=synthetic-edit-tests --network host --memory 1g --cpus 2 mongo@sha256:6dad6a5e2addb71d84eb417fcbcba0e11d096669917f8e8c26607cd7b52f9495 mongod --bind_ip 127.0.0.1 --port 27191 --replSet synthetic_rs --oplogSize 128 --wiredTigerCacheSizeGB 0.25
+          for n in $(seq 1 30); do
+            if /tmp/synthetic-venv/bin/python tests/synthetic-edit-only/integration/bootstrap_replica.py; then exit 0; fi
+            sleep 1
+          done
+          exit 1
+      - name: Verify unchanged source checksums and offline baseline
+        working-directory: tests/synthetic-edit-only/baseline
+        run: |
+          sha256sum -c SHA256SUMS.txt
+          /tmp/synthetic-venv/bin/python -B -m unittest discover -v
+      - name: Run real transactions concurrency process and server crashes
+        working-directory: tests/synthetic-edit-only/integration
+        run: /tmp/synthetic-venv/bin/python -B -m unittest discover -v
+      - name: Print synthetic database diagnostics on failure
+        if: failure()
+        run: docker logs --tail 100 synthetic-edit-mongo || true
+      - name: Stop temporary test container
+        if: always()
+        run: docker stop --time 10 synthetic-edit-mongo || true
