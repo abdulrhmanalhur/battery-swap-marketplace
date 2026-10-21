@@ -47,6 +47,8 @@
     "mongodb": {
       "type": "http",
       "url": "https://mcpgooads.batteryswap.cc/mongodb/mcp",
+      "auth": "oauth",
+      "scopes": ["mongodb:read"],
       "startup_timeout_sec": 30,
       "tool_timeout_sec": 120,
       "required": false

@@ -30,6 +30,10 @@ jobs:
           assert manifest['mcpServers'] == './.mcp.json'
           assert marketplace['plugins'][0]['source']['path'] == './plugins/battery-swap-mcps'
           assert mcps['mcpServers']
+          mongodb = mcps['mcpServers']['mongodb']
+          assert mongodb['url'] == 'https://mcpgooads.batteryswap.cc/mongodb/mcp'
+          assert mongodb['auth'] == 'oauth'
+          assert mongodb['scopes'] == ['mongodb:read']
           for name, server in mcps['mcpServers'].items():
               assert server.get('type') == 'http', name
               assert server.get('url', '').startswith('https://'), name
