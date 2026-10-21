@@ -1,0 +1,3771 @@
+{
+  "arabicbrandmaps": {
+    "kind": "object",
+    "fields": {
+      "arabic": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "latin": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "attribution_contacts": {
+    "kind": "object",
+    "fields": {
+      "leadId": {
+        "kind": "reference",
+        "query": false
+      },
+      "bindingStatus": {
+        "kind": "enum",
+        "values": [
+          "bound",
+          "conflict"
+        ]
+      },
+      "firstObservedAt": {
+        "kind": "date"
+      },
+      "lastObservedAt": {
+        "kind": "date"
+      },
+      "leadCreatedAt": {
+        "kind": "date"
+      },
+      "previousLeadStatus": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "managesSoldStatus": {
+        "kind": "boolean"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "attribution_customer_locks": {
+    "kind": "object",
+    "fields": {
+      "revision": {
+        "kind": "number"
+      },
+      "_id": {
+        "kind": "id"
+      }
+    }
+  },
+  "attribution_events": {
+    "kind": "object",
+    "fields": {
+      "eventId": {
+        "kind": "reference",
+        "query": false
+      },
+      "eventType": {
+        "kind": "enum",
+        "values": [
+          "lead_observed",
+          "invoice_sent"
+        ]
+      },
+      "occurredAt": {
+        "kind": "date"
+      },
+      "outcome": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "attribution_leads": {
+    "kind": "object",
+    "fields": {
+      "leadId": {
+        "kind": "reference",
+        "query": false
+      },
+      "channel": {
+        "kind": "enum",
+        "values": [
+          "whatsapp",
+          "call"
+        ]
+      },
+      "status": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "placement": {
+        "kind": "enum",
+        "values": [
+          "floating",
+          "topbar",
+          "mobile_header",
+          "footer",
+          "contact_page",
+          "battery_replacement",
+          "unknown"
+        ]
+      },
+      "language": {
+        "kind": "enum",
+        "values": [
+          "ar",
+          "en"
+        ]
+      },
+      "expiresAt": {
+        "kind": "date"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "attribution_sales": {
+    "kind": "object",
+    "fields": {
+      "saleKey": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "invoiceSource": {
+        "kind": "enum",
+        "values": [
+          "manager",
+          "website",
+          "bot"
+        ]
+      },
+      "saleStatus": {
+        "kind": "enum",
+        "values": [
+          "sold"
+        ]
+      },
+      "category": {
+        "kind": "enum",
+        "values": [
+          "battery_or_battery_subscription"
+        ]
+      },
+      "firstSentAt": {
+        "kind": "date"
+      },
+      "lastSentAt": {
+        "kind": "date"
+      },
+      "evidenceCount": {
+        "kind": "number"
+      },
+      "invoiceVerified": {
+        "kind": "boolean"
+      },
+      "invoiceIssuedAt": {
+        "kind": "date"
+      },
+      "invoiceValue": {
+        "kind": "number"
+      },
+      "attributionStatus": {
+        "kind": "enum",
+        "values": [
+          "matched",
+          "ambiguous",
+          "unmatched"
+        ]
+      },
+      "attributionMethod": {
+        "kind": "enum",
+        "values": [
+          "explicit",
+          "temporal",
+          "none"
+        ]
+      },
+      "leadId": {
+        "kind": "reference",
+        "query": false
+      },
+      "campaignId": {
+        "kind": "reference",
+        "query": false
+      },
+      "hasGoogleClickId": {
+        "kind": "boolean"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "banktransactions": {
+    "kind": "object",
+    "fields": {
+      "userId": {
+        "kind": "reference",
+        "query": false
+      },
+      "bridgeId": {
+        "kind": "number"
+      },
+      "kind": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "direction": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "amount": {
+        "kind": "number"
+      },
+      "currency": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "remainingAllowance": {
+        "kind": "number"
+      },
+      "fees": {
+        "kind": "number"
+      },
+      "counterparty": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "cardLast4": {
+        "kind": "last4",
+        "query": false
+      },
+      "viaBank": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "occurredAt": {
+        "kind": "date"
+      },
+      "matchStatus": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "matchedInvoiceId": {
+        "kind": "reference",
+        "query": false
+      },
+      "matchedAt": {
+        "kind": "date"
+      },
+      "expenseStatus": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "creditOperationId": {
+        "kind": "reference",
+        "query": false
+      },
+      "expenseReviewedBy": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "expenseReviewedAt": {
+        "kind": "date"
+      },
+      "topupStatus": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "topupOperationId": {
+        "kind": "reference",
+        "query": false
+      },
+      "topupReversalOperationId": {
+        "kind": "reference",
+        "query": false
+      },
+      "filterIds": {
+        "kind": "array",
+        "items": {
+          "kind": "number"
+        },
+        "max_items": 100
+      },
+      "sourceScope": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "reviewStatus": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "reviewSentAt": {
+        "kind": "date"
+      },
+      "reviewChatId": {
+        "kind": "reference",
+        "query": false
+      },
+      "reviewSourceAccount": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "reviewSettlementAmount": {
+        "kind": "number"
+      },
+      "reviewSettlementOperationId": {
+        "kind": "reference",
+        "query": false
+      },
+      "reviewTerminalNoticeId": {
+        "kind": "number"
+      },
+      "reviewCategory": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "reviewDeductProfit": {
+        "kind": "boolean"
+      },
+      "reviewedAt": {
+        "kind": "date"
+      },
+      "reviewedBy": {
+        "kind": "reference",
+        "query": false
+      },
+      "reviewInvoiceAttachedAt": {
+        "kind": "date"
+      },
+      "reviewInvoiceBatchId": {
+        "kind": "reference",
+        "query": false
+      },
+      "reviewManualPurchaseId": {
+        "kind": "reference",
+        "query": false
+      },
+      "reviewManualCreditOperationId": {
+        "kind": "reference",
+        "query": false
+      },
+      "reviewManualAdjustmentOperationId": {
+        "kind": "reference",
+        "query": false
+      },
+      "reviewDebitVerified": {
+        "kind": "boolean"
+      },
+      "reviewMatchIssue": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "salaryOffsetAmount": {
+        "kind": "number"
+      },
+      "salaryOffsetAppliedAt": {
+        "kind": "date"
+      },
+      "parsedBy": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "bannertexts": {
+    "kind": "object",
+    "fields": {
+      "language": {
+        "kind": "enum",
+        "values": [
+          "en",
+          "ar"
+        ]
+      },
+      "enabled": {
+        "kind": "boolean"
+      },
+      "order": {
+        "kind": "number"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "bonusoperations": {
+    "kind": "object",
+    "fields": {
+      "userId": {
+        "kind": "reference",
+        "query": false
+      },
+      "kind": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "delta": {
+        "kind": "number"
+      },
+      "balanceAfter": {
+        "kind": "number"
+      },
+      "actorUserId": {
+        "kind": "reference",
+        "query": false
+      },
+      "occurredAt": {
+        "kind": "date"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "bonusroles": {
+    "kind": "object",
+    "fields": {
+      "userId": {
+        "kind": "reference",
+        "query": false
+      },
+      "bonusDisabled": {
+        "kind": "boolean"
+      },
+      "rules": {
+        "kind": "array",
+        "items": {
+          "kind": "object",
+          "fields": {
+            "aboveTotal": {
+              "kind": "number"
+            },
+            "earnBonus": {
+              "kind": "number"
+            }
+          }
+        },
+        "max_items": 100
+      },
+      "afterSaleBonusRule": {
+        "kind": "object",
+        "fields": {
+          "active": {
+            "kind": "boolean"
+          },
+          "salesCount": {
+            "kind": "number"
+          },
+          "bonusAmount": {
+            "kind": "number"
+          }
+        }
+      },
+      "isPerProduct": {
+        "kind": "boolean"
+      },
+      "active24Hours": {
+        "kind": "boolean"
+      },
+      "active24HoursHalfBonus": {
+        "kind": "boolean"
+      },
+      "startHour": {
+        "kind": "number"
+      },
+      "startMinute": {
+        "kind": "number"
+      },
+      "endHour": {
+        "kind": "number"
+      },
+      "endMinute": {
+        "kind": "number"
+      },
+      "alwaysActiveDays": {
+        "kind": "array",
+        "items": {
+          "kind": "number"
+        },
+        "max_items": 100
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "bonusstates": {
+    "kind": "object",
+    "fields": {
+      "userId": {
+        "kind": "reference",
+        "query": false
+      },
+      "balance": {
+        "kind": "number"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "carbatteries": {
+    "kind": "object",
+    "fields": {
+      "make": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "model": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "year": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "batteries": {
+        "kind": "array",
+        "items": {
+          "kind": "object",
+          "fields": {
+            "voltage": {
+              "kind": "enum",
+              "values": [
+                "HI",
+                "LW",
+                "S"
+              ]
+            },
+            "direction": {
+              "kind": "enum",
+              "values": [
+                "L",
+                "R"
+              ]
+            },
+            "size": {
+              "kind": "label",
+              "max_length": 160
+            }
+          }
+        },
+        "max_items": 100
+      },
+      "_id": {
+        "kind": "id"
+      }
+    }
+  },
+  "carcatalogs": {
+    "kind": "object",
+    "fields": {
+      "makeSlug": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "make": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "makeAr": {
+        "kind": "array",
+        "items": {
+          "kind": "label",
+          "max_length": 160
+        },
+        "max_items": 100
+      },
+      "makeNameAr": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "slug": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "model": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "modelAr": {
+        "kind": "array",
+        "items": {
+          "kind": "label",
+          "max_length": 160
+        },
+        "max_items": 100
+      },
+      "modelNameAr": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "active": {
+        "kind": "boolean"
+      },
+      "referenceVersion": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "carfitments": {
+    "kind": "object",
+    "fields": {
+      "makeSlug": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "modelSlug": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "make": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "model": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "year": {
+        "kind": "number"
+      },
+      "code": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "codeKey": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "ah": {
+        "kind": "array",
+        "items": {
+          "kind": "number"
+        },
+        "max_items": 100
+      },
+      "directions": {
+        "kind": "array",
+        "items": {
+          "kind": "label",
+          "max_length": 160
+        },
+        "max_items": 100
+      },
+      "heights": {
+        "kind": "array",
+        "items": {
+          "kind": "label",
+          "max_length": 160
+        },
+        "max_items": 100
+      },
+      "support": {
+        "kind": "number"
+      },
+      "sources": {
+        "kind": "array",
+        "items": {
+          "kind": "label",
+          "max_length": 160
+        },
+        "max_items": 100
+      },
+      "verified": {
+        "kind": "boolean"
+      },
+      "reviewed": {
+        "kind": "boolean"
+      },
+      "aliasOf": {
+        "kind": "reference",
+        "query": false
+      },
+      "firstSeenAt": {
+        "kind": "date"
+      },
+      "lastSeenAt": {
+        "kind": "date"
+      },
+      "status": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "issues": {
+        "kind": "array",
+        "items": {
+          "kind": "label",
+          "max_length": 160
+        },
+        "max_items": 100
+      },
+      "adminEdited": {
+        "kind": "boolean"
+      },
+      "aliasDecision": {
+        "kind": "object",
+        "fields": {
+          "code": {
+            "kind": "label",
+            "max_length": 160
+          },
+          "target": {
+            "kind": "label",
+            "max_length": 160
+          },
+          "action": {
+            "kind": "enum",
+            "values": [
+              "merged",
+              "rejected"
+            ]
+          }
+        }
+      },
+      "syncedAt": {
+        "kind": "date"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "carfitmentsources": {
+    "kind": "object",
+    "fields": {
+      "records": {
+        "kind": "number"
+      },
+      "newestRecordAt": {
+        "kind": "date"
+      },
+      "origin": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "receivedAt": {
+        "kind": "date"
+      },
+      "lastRun": {
+        "kind": "object",
+        "fields": {
+          "at": {
+            "kind": "date"
+          },
+          "origin": {
+            "kind": "label",
+            "max_length": 160
+          },
+          "ok": {
+            "kind": "boolean"
+          },
+          "saleRecords": {
+            "kind": "number"
+          },
+          "saleDuplicates": {
+            "kind": "number"
+          },
+          "inserted": {
+            "kind": "number"
+          },
+          "updated": {
+            "kind": "number"
+          },
+          "unchanged": {
+            "kind": "number"
+          }
+        }
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "cashoperations": {
+    "kind": "object",
+    "fields": {
+      "userId": {
+        "kind": "reference",
+        "query": false
+      },
+      "kind": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "delta": {
+        "kind": "number"
+      },
+      "balanceAfter": {
+        "kind": "number"
+      },
+      "actorUserId": {
+        "kind": "reference",
+        "query": false
+      },
+      "occurredAt": {
+        "kind": "date"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "cashstates": {
+    "kind": "object",
+    "fields": {
+      "userId": {
+        "kind": "reference",
+        "query": false
+      },
+      "balance": {
+        "kind": "number"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "contactmessagelimits": {
+    "kind": "object",
+    "fields": {
+      "day": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "count": {
+        "kind": "number"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "counters": {
+    "kind": "object",
+    "fields": {
+      "seq": {
+        "kind": "number"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "creditoperations": {
+    "kind": "object",
+    "fields": {
+      "userId": {
+        "kind": "reference",
+        "query": false
+      },
+      "kind": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "delta": {
+        "kind": "number"
+      },
+      "balanceAfter": {
+        "kind": "number"
+      },
+      "actorUserId": {
+        "kind": "reference",
+        "query": false
+      },
+      "inventoryMatchedOutgoingTransactionId": {
+        "kind": "reference",
+        "query": false
+      },
+      "reversesCreditOperationId": {
+        "kind": "reference",
+        "query": false
+      },
+      "bankTransactionId": {
+        "kind": "reference",
+        "query": false
+      },
+      "occurredAt": {
+        "kind": "date"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "creditstates": {
+    "kind": "object",
+    "fields": {
+      "userId": {
+        "kind": "reference",
+        "query": false
+      },
+      "balance": {
+        "kind": "number"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "depositpayments": {
+    "kind": "object",
+    "fields": {
+      "paymentId": {
+        "kind": "reference",
+        "query": false
+      },
+      "amount": {
+        "kind": "number"
+      },
+      "customerPhone": {
+        "kind": "phone",
+        "query": false
+      },
+      "technicianNumber": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "paidAt": {
+        "kind": "date"
+      },
+      "consumedByInvoice": {
+        "kind": "reference",
+        "query": false
+      },
+      "consumedAt": {
+        "kind": "date"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "discountcodes": {
+    "kind": "object",
+    "fields": {
+      "giftCardName": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "denominationTitle": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "sellingPrice": {
+        "kind": "number"
+      },
+      "expirationDate": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "faceValue": {
+        "kind": "number"
+      },
+      "percentage": {
+        "kind": "number"
+      },
+      "discountType": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "creationDate": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "usedAt": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "autoGenerated": {
+        "kind": "boolean"
+      },
+      "orderId": {
+        "kind": "reference",
+        "query": false
+      },
+      "orderAmount": {
+        "kind": "number"
+      },
+      "reserved": {
+        "kind": "boolean"
+      },
+      "reservedAt": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "reservedByRole": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "reservedOrderId": {
+        "kind": "reference",
+        "query": false
+      },
+      "usageType": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "used": {
+        "kind": "boolean"
+      },
+      "exported": {
+        "kind": "boolean"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "discountsettings": {
+    "kind": "object",
+    "fields": {
+      "codesDisabled": {
+        "kind": "boolean"
+      },
+      "updatedByUserId": {
+        "kind": "reference",
+        "query": false
+      },
+      "updatedByEmail": {
+        "kind": "email",
+        "query": false
+      },
+      "updatedAtIso": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "externalfinanceaccountoperations": {
+    "kind": "object",
+    "fields": {
+      "userId": {
+        "kind": "reference",
+        "query": false
+      },
+      "kind": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "delta": {
+        "kind": "number"
+      },
+      "balanceAfter": {
+        "kind": "number"
+      },
+      "actorUserId": {
+        "kind": "reference",
+        "query": false
+      },
+      "sourceKey": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "occurredAt": {
+        "kind": "date"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "externalfinanceaccountstates": {
+    "kind": "object",
+    "fields": {
+      "userId": {
+        "kind": "reference",
+        "query": false
+      },
+      "balance": {
+        "kind": "number"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "herocarouselslides": {
+    "kind": "object",
+    "fields": {
+      "alt": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "enabled": {
+        "kind": "boolean"
+      },
+      "order": {
+        "kind": "number"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "inventorycostcycles": {
+    "kind": "object",
+    "fields": {
+      "requestId": {
+        "kind": "reference",
+        "query": false
+      },
+      "startedAt": {
+        "kind": "date"
+      },
+      "startedByUserId": {
+        "kind": "reference",
+        "query": false
+      },
+      "startedByEmail": {
+        "kind": "email",
+        "query": false
+      },
+      "active": {
+        "kind": "boolean"
+      },
+      "previousCycleId": {
+        "kind": "reference",
+        "query": false
+      },
+      "pendingTrackerCount": {
+        "kind": "number"
+      },
+      "pendingInvoiceCount": {
+        "kind": "number"
+      },
+      "pendingQuantity": {
+        "kind": "number"
+      },
+      "negativeProducts": {
+        "kind": "array",
+        "items": {
+          "kind": "object",
+          "fields": {
+            "productId": {
+              "kind": "reference",
+              "query": false
+            },
+            "productName": {
+              "kind": "label",
+              "max_length": 160
+            },
+            "quantity": {
+              "kind": "number"
+            }
+          }
+        },
+        "max_items": 100
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "inventorysalecosts": {
+    "kind": "object",
+    "fields": {
+      "saleOperationId": {
+        "kind": "reference",
+        "query": false
+      },
+      "invoiceNumber": {
+        "kind": "number"
+      },
+      "invoiceCode": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "createdByUserId": {
+        "kind": "reference",
+        "query": false
+      },
+      "saleOccurredAt": {
+        "kind": "date"
+      },
+      "saleLineIndex": {
+        "kind": "number"
+      },
+      "productId": {
+        "kind": "reference",
+        "query": false
+      },
+      "ownerUserId": {
+        "kind": "reference",
+        "query": false
+      },
+      "productName": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "quantitySold": {
+        "kind": "number"
+      },
+      "provisionalUnitCost": {
+        "kind": "number"
+      },
+      "pendingQuantity": {
+        "kind": "number"
+      },
+      "deficitOnly": {
+        "kind": "boolean"
+      },
+      "allocations": {
+        "kind": "array",
+        "items": {
+          "kind": "object",
+          "fields": {
+            "sourceLotId": {
+              "kind": "reference",
+              "query": false
+            },
+            "sourceType": {
+              "kind": "enum",
+              "values": [
+                "invoice",
+                "cash",
+                "manual",
+                "opening"
+              ]
+            },
+            "purchaseBatchId": {
+              "kind": "reference",
+              "query": false
+            },
+            "purchaseOperationId": {
+              "kind": "reference",
+              "query": false
+            },
+            "quantity": {
+              "kind": "number"
+            },
+            "unitCost": {
+              "kind": "number"
+            },
+            "allocatedAt": {
+              "kind": "date"
+            }
+          }
+        },
+        "max_items": 100
+      },
+      "corrections": {
+        "kind": "array",
+        "items": {
+          "kind": "object",
+          "fields": {
+            "correctedAt": {
+              "kind": "date"
+            },
+            "quantity": {
+              "kind": "number"
+            },
+            "sourceType": {
+              "kind": "enum",
+              "values": [
+                "invoice",
+                "cash",
+                "manual",
+                "opening"
+              ]
+            },
+            "purchaseBatchId": {
+              "kind": "reference",
+              "query": false
+            },
+            "purchaseOperationId": {
+              "kind": "reference",
+              "query": false
+            },
+            "previousUnitCost": {
+              "kind": "number"
+            },
+            "correctedUnitCost": {
+              "kind": "number"
+            },
+            "profitBefore": {
+              "kind": "number"
+            },
+            "profitAfter": {
+              "kind": "number"
+            },
+            "bonusBefore": {
+              "kind": "number"
+            },
+            "bonusAfter": {
+              "kind": "number"
+            }
+          }
+        },
+        "max_items": 100
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "inventoryscrapexclusions": {
+    "kind": "object",
+    "fields": {
+      "userId": {
+        "kind": "reference",
+        "query": false
+      },
+      "saleOperationId": {
+        "kind": "reference",
+        "query": false
+      },
+      "saleLineIndex": {
+        "kind": "number"
+      },
+      "ignored": {
+        "kind": "boolean"
+      },
+      "reviewedByUserId": {
+        "kind": "reference",
+        "query": false
+      },
+      "returnFlagClearedAt": {
+        "kind": "date"
+      },
+      "returnFlagClearedByUserId": {
+        "kind": "reference",
+        "query": false
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "inventorysourcelots": {
+    "kind": "object",
+    "fields": {
+      "productId": {
+        "kind": "reference",
+        "query": false
+      },
+      "ownerUserId": {
+        "kind": "reference",
+        "query": false
+      },
+      "productName": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "sourceType": {
+        "kind": "enum",
+        "values": [
+          "invoice",
+          "cash",
+          "manual",
+          "opening"
+        ]
+      },
+      "originKey": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "purchaseBatchId": {
+        "kind": "reference",
+        "query": false
+      },
+      "purchaseOperationId": {
+        "kind": "reference",
+        "query": false
+      },
+      "receivedAt": {
+        "kind": "date"
+      },
+      "unitCost": {
+        "kind": "number"
+      },
+      "quantityReceived": {
+        "kind": "number"
+      },
+      "quantityRemaining": {
+        "kind": "number"
+      },
+      "createdByUserId": {
+        "kind": "reference",
+        "query": false
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "inventoryupdatebatches": {
+    "kind": "object",
+    "fields": {
+      "userId": {
+        "kind": "reference",
+        "query": false
+      },
+      "occurredAt": {
+        "kind": "date"
+      },
+      "supplierName": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "supplierPhone": {
+        "kind": "phone",
+        "query": false
+      },
+      "vatAddedToLineCosts": {
+        "kind": "boolean"
+      },
+      "source": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "manualRequestId": {
+        "kind": "reference",
+        "query": false
+      },
+      "totalPurchase": {
+        "kind": "number"
+      },
+      "items": {
+        "kind": "array",
+        "items": {
+          "kind": "object",
+          "fields": {
+            "productId": {
+              "kind": "reference",
+              "query": false
+            },
+            "productName": {
+              "kind": "label",
+              "max_length": 160
+            },
+            "isNew": {
+              "kind": "boolean"
+            },
+            "isSubstitute": {
+              "kind": "boolean"
+            },
+            "invoiceProduct": {
+              "kind": "object",
+              "fields": {
+                "name": {
+                  "kind": "label",
+                  "max_length": 160
+                },
+                "maker": {
+                  "kind": "label",
+                  "max_length": 160
+                },
+                "size": {
+                  "kind": "label",
+                  "max_length": 160
+                },
+                "shortID": {
+                  "kind": "reference",
+                  "query": false
+                }
+              }
+            },
+            "quantityAdded": {
+              "kind": "number"
+            },
+            "unitCost": {
+              "kind": "number"
+            },
+            "creditDelta": {
+              "kind": "number"
+            },
+            "prevQuantity": {
+              "kind": "number"
+            },
+            "prevCost": {
+              "kind": "number"
+            },
+            "prevLowestCost": {
+              "kind": "number"
+            },
+            "prevHighestCost": {
+              "kind": "number"
+            },
+            "appliedCost": {
+              "kind": "number"
+            },
+            "appliedLowestCost": {
+              "kind": "number"
+            },
+            "appliedHighestCost": {
+              "kind": "number"
+            },
+            "prevSalesPrice": {
+              "kind": "number"
+            },
+            "appliedSalesPrice": {
+              "kind": "number"
+            },
+            "prevRecommendedPrice": {
+              "kind": "number"
+            },
+            "appliedRecommendedPrice": {
+              "kind": "number"
+            },
+            "saleOperationId": {
+              "kind": "reference",
+              "query": false
+            },
+            "creditOperationId": {
+              "kind": "reference",
+              "query": false
+            }
+          }
+        },
+        "max_items": 100
+      },
+      "mainPaymentMethod": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "mainPayment": {
+        "kind": "number"
+      },
+      "mixPaymentMethod": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "mixPayment": {
+        "kind": "number"
+      },
+      "cashDelta": {
+        "kind": "number"
+      },
+      "cashOperationId": {
+        "kind": "reference",
+        "query": false
+      },
+      "creditDelta": {
+        "kind": "number"
+      },
+      "creditOperationId": {
+        "kind": "reference",
+        "query": false
+      },
+      "smsSettlementAmount": {
+        "kind": "number"
+      },
+      "invoiceEdits": {
+        "kind": "array",
+        "items": {
+          "kind": "object",
+          "fields": {
+            "editedAt": {
+              "kind": "date"
+            },
+            "actorUserId": {
+              "kind": "reference",
+              "query": false
+            },
+            "before": {
+              "kind": "object",
+              "fields": {
+                "supplierName": {
+                  "kind": "label",
+                  "max_length": 160
+                },
+                "supplierPhone": {
+                  "kind": "phone",
+                  "query": false
+                },
+                "mainPaymentMethod": {
+                  "kind": "label",
+                  "max_length": 160
+                },
+                "mainPayment": {
+                  "kind": "number"
+                },
+                "mixPaymentMethod": {
+                  "kind": "label",
+                  "max_length": 160
+                },
+                "mixPayment": {
+                  "kind": "number"
+                },
+                "cashDelta": {
+                  "kind": "number"
+                },
+                "creditDelta": {
+                  "kind": "number"
+                },
+                "smsSettlementAmount": {
+                  "kind": "number"
+                }
+              }
+            },
+            "after": {
+              "kind": "object",
+              "fields": {
+                "supplierName": {
+                  "kind": "label",
+                  "max_length": 160
+                },
+                "supplierPhone": {
+                  "kind": "phone",
+                  "query": false
+                },
+                "mainPaymentMethod": {
+                  "kind": "label",
+                  "max_length": 160
+                },
+                "mainPayment": {
+                  "kind": "number"
+                },
+                "mixPaymentMethod": {
+                  "kind": "label",
+                  "max_length": 160
+                },
+                "mixPayment": {
+                  "kind": "number"
+                },
+                "cashDelta": {
+                  "kind": "number"
+                },
+                "creditDelta": {
+                  "kind": "number"
+                },
+                "smsSettlementAmount": {
+                  "kind": "number"
+                }
+              }
+            }
+          }
+        },
+        "max_items": 100
+      },
+      "matchedOutgoingTransactionId": {
+        "kind": "reference",
+        "query": false
+      },
+      "undoneAt": {
+        "kind": "date"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "madareceiptminutelocks": {
+    "kind": "object",
+    "fields": {
+      "_id": {
+        "kind": "id"
+      },
+      "version": {
+        "kind": "number"
+      }
+    }
+  },
+  "makers": {
+    "kind": "object",
+    "fields": {
+      "name": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "country": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "alts": {
+        "kind": "array",
+        "items": {
+          "kind": "label",
+          "max_length": 160
+        },
+        "max_items": 100
+      },
+      "alwaysVisibleProducts": {
+        "kind": "boolean"
+      },
+      "lastActivity": {
+        "kind": "date"
+      },
+      "35_HI_L": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "35_HI_R": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "40-60_HI_L": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "40-60_HI_R": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "40-60_LW_L": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "40-60_LW_R": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "62-95_HI_L": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "62-95_HI_R": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "62-95_LW_L": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "62-95_LW_R": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "100+_HI_L": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "100+_HI_R": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "S": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "guarantee": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "managerinvoices": {
+    "kind": "object",
+    "fields": {
+      "invoiceNumber": {
+        "kind": "number"
+      },
+      "invoiceCode": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "invoiceType": {
+        "kind": "enum",
+        "values": [
+          "sale",
+          "offer"
+        ]
+      },
+      "products": {
+        "kind": "array",
+        "items": {
+          "kind": "object",
+          "fields": {
+            "productId": {
+              "kind": "reference",
+              "query": false
+            },
+            "productName": {
+              "kind": "label",
+              "max_length": 160
+            },
+            "quantity": {
+              "kind": "number"
+            },
+            "inventoryAfterSale": {
+              "kind": "number"
+            },
+            "unitPrice": {
+              "kind": "number"
+            },
+            "unitCost": {
+              "kind": "number"
+            },
+            "gross": {
+              "kind": "number"
+            },
+            "net": {
+              "kind": "number"
+            },
+            "paymentFeeShare": {
+              "kind": "number"
+            },
+            "fee": {
+              "kind": "number"
+            },
+            "bonus": {
+              "kind": "number"
+            },
+            "oldBattery": {
+              "kind": "boolean"
+            },
+            "roadHelp": {
+              "kind": "boolean"
+            },
+            "goldenGuarantee": {
+              "kind": "boolean"
+            }
+          }
+        },
+        "max_items": 100
+      },
+      "fee": {
+        "kind": "number"
+      },
+      "serviceItems": {
+        "kind": "array",
+        "items": {
+          "kind": "object",
+          "fields": {
+            "code": {
+              "kind": "label",
+              "max_length": 160
+            },
+            "name": {
+              "kind": "label",
+              "max_length": 160
+            },
+            "quantity": {
+              "kind": "number"
+            },
+            "unitPrice": {
+              "kind": "number"
+            },
+            "amount": {
+              "kind": "number"
+            }
+          }
+        },
+        "max_items": 100
+      },
+      "extraServicesTotal": {
+        "kind": "number"
+      },
+      "paymentsParts": {
+        "kind": "array",
+        "items": {
+          "kind": "object",
+          "fields": {
+            "name": {
+              "kind": "label",
+              "max_length": 160
+            },
+            "amount": {
+              "kind": "number"
+            }
+          }
+        },
+        "max_items": 100
+      },
+      "discountApplied": {
+        "kind": "boolean"
+      },
+      "discountAmount": {
+        "kind": "number"
+      },
+      "grossTotal": {
+        "kind": "number"
+      },
+      "netTotal": {
+        "kind": "number"
+      },
+      "belowCostReviewRequired": {
+        "kind": "boolean"
+      },
+      "belowCostReviewStatus": {
+        "kind": "enum",
+        "values": [
+          "not_required",
+          "pending",
+          "approved",
+          "flagged"
+        ]
+      },
+      "belowCostReviewedAt": {
+        "kind": "date"
+      },
+      "madaReceiptCheck": {
+        "kind": "object",
+        "fields": {
+          "status": {
+            "kind": "enum",
+            "values": [
+              "verified",
+              "needs_review",
+              "verified_manual",
+              "rejected_manual"
+            ]
+          },
+          "expectedAmount": {
+            "kind": "number"
+          },
+          "extractedAmount": {
+            "kind": "number"
+          },
+          "receiptOccurredAt": {
+            "kind": "date"
+          },
+          "receiptOccurredAts": {
+            "kind": "array",
+            "items": {
+              "kind": "date"
+            },
+            "max_items": 100
+          },
+          "duplicateInvoiceNumber": {
+            "kind": "number"
+          },
+          "duplicateInvoiceCode": {
+            "kind": "label",
+            "max_length": 160
+          },
+          "reader": {
+            "kind": "enum",
+            "values": [
+              "local",
+              "gemini"
+            ]
+          },
+          "geminiStatus": {
+            "kind": "enum",
+            "values": [
+              "disabled",
+              "missing_key",
+              "not_needed",
+              "used",
+              "failed"
+            ]
+          },
+          "checkedAt": {
+            "kind": "date"
+          },
+          "verifiedAt": {
+            "kind": "date"
+          },
+          "reviewedBy": {
+            "kind": "reference",
+            "query": false
+          },
+          "reviewedAt": {
+            "kind": "date"
+          }
+        }
+      },
+      "isCarInfo": {
+        "kind": "boolean"
+      },
+      "isOldBattery": {
+        "kind": "boolean"
+      },
+      "LW": {
+        "kind": "boolean"
+      },
+      "L": {
+        "kind": "boolean"
+      },
+      "carData": {
+        "kind": "object",
+        "fields": {
+          "brand": {
+            "kind": "label",
+            "max_length": 160
+          },
+          "model": {
+            "kind": "label",
+            "max_length": 160
+          },
+          "year": {
+            "kind": "label",
+            "max_length": 160
+          },
+          "standardSize": {
+            "kind": "label",
+            "max_length": 160
+          },
+          "upgradeSize": {
+            "kind": "label",
+            "max_length": 160
+          }
+        }
+      },
+      "companyData": {
+        "kind": "object",
+        "fields": {
+          "name": {
+            "kind": "label",
+            "max_length": 160
+          },
+          "zipCode": {
+            "kind": "label",
+            "max_length": 160
+          },
+          "vatNumber": {
+            "kind": "label",
+            "max_length": 160
+          },
+          "email": {
+            "kind": "email",
+            "query": false
+          },
+          "phone": {
+            "kind": "phone",
+            "query": false
+          }
+        }
+      },
+      "depositCheck": {
+        "kind": "object",
+        "fields": {
+          "status": {
+            "kind": "enum",
+            "values": [
+              "verified",
+              "needs_review",
+              "verified_manual",
+              "rejected_manual"
+            ]
+          },
+          "amount": {
+            "kind": "number"
+          },
+          "paymentId": {
+            "kind": "reference",
+            "query": false
+          },
+          "reviewedBy": {
+            "kind": "reference",
+            "query": false
+          },
+          "reviewedAt": {
+            "kind": "date"
+          },
+          "bonusCancelled": {
+            "kind": "boolean"
+          }
+        }
+      },
+      "bankCheck": {
+        "kind": "object",
+        "fields": {
+          "status": {
+            "kind": "enum",
+            "values": [
+              "verified",
+              "needs_review",
+              "verified_manual",
+              "rejected_manual"
+            ]
+          },
+          "amount": {
+            "kind": "number"
+          },
+          "transactionId": {
+            "kind": "reference",
+            "query": false
+          },
+          "matchedAmount": {
+            "kind": "number"
+          },
+          "sender": {
+            "kind": "label",
+            "max_length": 160
+          },
+          "transferredAt": {
+            "kind": "date"
+          },
+          "reviewedBy": {
+            "kind": "reference",
+            "query": false
+          },
+          "reviewedAt": {
+            "kind": "date"
+          },
+          "creditReversed": {
+            "kind": "boolean"
+          }
+        }
+      },
+      "stcPayCheck": {
+        "kind": "object",
+        "fields": {
+          "status": {
+            "kind": "enum",
+            "values": [
+              "verified",
+              "needs_review",
+              "verified_manual",
+              "rejected_manual"
+            ]
+          },
+          "amount": {
+            "kind": "number"
+          },
+          "transactionId": {
+            "kind": "reference",
+            "query": false
+          },
+          "matchedAmount": {
+            "kind": "number"
+          },
+          "sender": {
+            "kind": "label",
+            "max_length": 160
+          },
+          "transferredAt": {
+            "kind": "date"
+          },
+          "reviewedBy": {
+            "kind": "reference",
+            "query": false
+          },
+          "reviewedAt": {
+            "kind": "date"
+          },
+          "creditReversed": {
+            "kind": "boolean"
+          }
+        }
+      },
+      "creditMode": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "createdByUserId": {
+        "kind": "reference",
+        "query": false
+      },
+      "occurredAt": {
+        "kind": "date"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "managerusers": {
+    "kind": "object",
+    "fields": {
+      "role": {
+        "kind": "enum",
+        "values": [
+          "admin",
+          "worker"
+        ]
+      },
+      "displayName": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "lastLoginAt": {
+        "kind": "date"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "outstandingbalanceoperations": {
+    "kind": "object",
+    "fields": {
+      "userId": {
+        "kind": "reference",
+        "query": false
+      },
+      "kind": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "delta": {
+        "kind": "number"
+      },
+      "balanceAfter": {
+        "kind": "number"
+      },
+      "actorUserId": {
+        "kind": "reference",
+        "query": false
+      },
+      "occurredAt": {
+        "kind": "date"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "outstandingbalancestates": {
+    "kind": "object",
+    "fields": {
+      "userId": {
+        "kind": "reference",
+        "query": false
+      },
+      "balance": {
+        "kind": "number"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "paymentmethods": {
+    "kind": "object",
+    "fields": {
+      "methods": {
+        "kind": "array",
+        "items": {
+          "kind": "object",
+          "fields": {
+            "name": {
+              "kind": "label",
+              "max_length": 160
+            },
+            "feePercent": {
+              "kind": "number"
+            }
+          }
+        },
+        "max_items": 100
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "pendingcashinventoryreviews": {
+    "kind": "object",
+    "fields": {
+      "status": {
+        "kind": "enum",
+        "values": [
+          "pending",
+          "processing",
+          "approved",
+          "rejected",
+          "failed"
+        ]
+      },
+      "actorUserId": {
+        "kind": "reference",
+        "query": false
+      },
+      "actorRole": {
+        "kind": "reference",
+        "query": false
+      },
+      "financeUserId": {
+        "kind": "reference",
+        "query": false
+      },
+      "reviewChatId": {
+        "kind": "reference",
+        "query": false
+      },
+      "reviewedAt": {
+        "kind": "date"
+      },
+      "processingStartedAt": {
+        "kind": "date"
+      },
+      "attemptCount": {
+        "kind": "number"
+      },
+      "purchaseOperationId": {
+        "kind": "reference",
+        "query": false
+      },
+      "executedAt": {
+        "kind": "date"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "pendingmanagersales": {
+    "kind": "object",
+    "fields": {
+      "provider": {
+        "kind": "enum",
+        "values": [
+          "tabby",
+          "tamara"
+        ]
+      },
+      "status": {
+        "kind": "enum",
+        "values": [
+          "pending",
+          "payment_created",
+          "processing",
+          "completed",
+          "canceled",
+          "failed"
+        ]
+      },
+      "phone": {
+        "kind": "phone",
+        "query": false
+      },
+      "amount": {
+        "kind": "number"
+      },
+      "currency": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "actorUserId": {
+        "kind": "reference",
+        "query": false
+      },
+      "actorRole": {
+        "kind": "reference",
+        "query": false
+      },
+      "targetUserId": {
+        "kind": "reference",
+        "query": false
+      },
+      "tabbySessionId": {
+        "kind": "reference",
+        "query": false
+      },
+      "tabbyPaymentId": {
+        "kind": "reference",
+        "query": false
+      },
+      "tabbyStatus": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "tamaraOrderId": {
+        "kind": "reference",
+        "query": false
+      },
+      "tamaraCheckoutId": {
+        "kind": "reference",
+        "query": false
+      },
+      "tamaraStatus": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "saleOperationId": {
+        "kind": "reference",
+        "query": false
+      },
+      "managerInvoiceId": {
+        "kind": "reference",
+        "query": false
+      },
+      "canceledAt": {
+        "kind": "date"
+      },
+      "completedAt": {
+        "kind": "date"
+      },
+      "cleanedAt": {
+        "kind": "date"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "productgroups": {
+    "kind": "object",
+    "fields": {
+      "name": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "productIds": {
+        "kind": "array",
+        "items": {
+          "kind": "reference",
+          "query": false
+        },
+        "max_items": 100
+      },
+      "alwaysVisible": {
+        "kind": "boolean"
+      },
+      "alwaysHidden": {
+        "kind": "boolean"
+      },
+      "disablePriceEdits": {
+        "kind": "boolean"
+      },
+      "disableFeeEdits": {
+        "kind": "boolean"
+      },
+      "disableMixEdits": {
+        "kind": "boolean"
+      },
+      "allowZeroPriceOnSale": {
+        "kind": "boolean"
+      },
+      "defaultOldBattery": {
+        "kind": "boolean"
+      },
+      "carDetails": {
+        "kind": "boolean"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "products": {
+    "kind": "object",
+    "fields": {
+      "name": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "salesPrice": {
+        "kind": "number"
+      },
+      "recommendedPrice": {
+        "kind": "number"
+      },
+      "cost": {
+        "kind": "number"
+      },
+      "quantity": {
+        "kind": "number"
+      },
+      "lastQuantityAddedAt": {
+        "kind": "date"
+      },
+      "alwaysVisible": {
+        "kind": "boolean"
+      },
+      "alwaysHidden": {
+        "kind": "boolean"
+      },
+      "disablePriceEdits": {
+        "kind": "boolean"
+      },
+      "allowAnyCashPurchasePrice": {
+        "kind": "boolean"
+      },
+      "disableFeeEdits": {
+        "kind": "boolean"
+      },
+      "disableMixEdits": {
+        "kind": "boolean"
+      },
+      "allowZeroPriceOnSale": {
+        "kind": "boolean"
+      },
+      "defaultOldBattery": {
+        "kind": "boolean"
+      },
+      "carDetails": {
+        "kind": "boolean"
+      },
+      "lowestCost": {
+        "kind": "number"
+      },
+      "highestCost": {
+        "kind": "number"
+      },
+      "size": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "maker": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "shortID": {
+        "kind": "reference",
+        "query": false
+      },
+      "voltage": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "direction": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "type": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "altShortIDs": {
+        "kind": "array",
+        "items": {
+          "kind": "reference",
+          "query": false
+        },
+        "max_items": 100
+      },
+      "altMakers": {
+        "kind": "array",
+        "items": {
+          "kind": "label",
+          "max_length": 160
+        },
+        "max_items": 100
+      },
+      "altSizes": {
+        "kind": "array",
+        "items": {
+          "kind": "label",
+          "max_length": 160
+        },
+        "max_items": 100
+      },
+      "alternativeNames": {
+        "kind": "array",
+        "items": {
+          "kind": "label",
+          "max_length": 160
+        },
+        "max_items": 100
+      },
+      "originalPrice": {
+        "kind": "number"
+      },
+      "discountPercent": {
+        "kind": "number"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "rajhivisabalanceoperations": {
+    "kind": "object",
+    "fields": {
+      "userId": {
+        "kind": "reference",
+        "query": false
+      },
+      "kind": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "delta": {
+        "kind": "number"
+      },
+      "balanceBefore": {
+        "kind": "number"
+      },
+      "balanceAfter": {
+        "kind": "number"
+      },
+      "baseAvailable": {
+        "kind": "number"
+      },
+      "filterId": {
+        "kind": "number"
+      },
+      "balanceSource": {
+        "kind": "enum",
+        "values": [
+          "bank",
+          "activity"
+        ]
+      },
+      "actorUserId": {
+        "kind": "reference",
+        "query": false
+      },
+      "occurredAt": {
+        "kind": "date"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "salarypayments": {
+    "kind": "object",
+    "fields": {
+      "userId": {
+        "kind": "reference",
+        "query": false
+      },
+      "scheduledDateISO": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "cadence": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "amount": {
+        "kind": "number"
+      },
+      "source": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "cashDeducted": {
+        "kind": "number"
+      },
+      "creditDeducted": {
+        "kind": "number"
+      },
+      "creditAwaitingTransfer": {
+        "kind": "number"
+      },
+      "cashSmsOffset": {
+        "kind": "number"
+      },
+      "creditSmsOffset": {
+        "kind": "number"
+      },
+      "status": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "processing": {
+        "kind": "boolean"
+      },
+      "processingAt": {
+        "kind": "date"
+      },
+      "saleOperationId": {
+        "kind": "reference",
+        "query": false
+      },
+      "actorUserId": {
+        "kind": "reference",
+        "query": false
+      },
+      "occurredAt": {
+        "kind": "date"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "salarysettings": {
+    "kind": "object",
+    "fields": {
+      "userId": {
+        "kind": "reference",
+        "query": false
+      },
+      "active": {
+        "kind": "boolean"
+      },
+      "amount": {
+        "kind": "number"
+      },
+      "cadence": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "weekDay": {
+        "kind": "number"
+      },
+      "monthDay": {
+        "kind": "number"
+      },
+      "source": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "saleoperations": {
+    "kind": "object",
+    "fields": {
+      "kind": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "orderId": {
+        "kind": "reference",
+        "query": false
+      },
+      "productId": {
+        "kind": "reference",
+        "query": false
+      },
+      "productName": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "quantity": {
+        "kind": "number"
+      },
+      "price": {
+        "kind": "number"
+      },
+      "inventoryBatchId": {
+        "kind": "reference",
+        "query": false
+      },
+      "inventorySourceType": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "inventoryCreditOperationId": {
+        "kind": "reference",
+        "query": false
+      },
+      "inventoryMatchedOutgoingTransactionId": {
+        "kind": "reference",
+        "query": false
+      },
+      "createdByUserId": {
+        "kind": "reference",
+        "query": false
+      },
+      "products": {
+        "kind": "array",
+        "items": {
+          "kind": "object",
+          "fields": {
+            "productId": {
+              "kind": "reference",
+              "query": false
+            },
+            "productName": {
+              "kind": "label",
+              "max_length": 160
+            },
+            "quantity": {
+              "kind": "number"
+            },
+            "inventoryAfterSale": {
+              "kind": "number"
+            },
+            "inventoryTracked": {
+              "kind": "boolean"
+            },
+            "unitPrice": {
+              "kind": "number"
+            },
+            "unitCost": {
+              "kind": "number"
+            },
+            "gross": {
+              "kind": "number"
+            },
+            "net": {
+              "kind": "number"
+            },
+            "paymentFeeShare": {
+              "kind": "number"
+            },
+            "fee": {
+              "kind": "number"
+            },
+            "bonus": {
+              "kind": "number"
+            },
+            "oldBattery": {
+              "kind": "boolean"
+            },
+            "roadHelp": {
+              "kind": "boolean"
+            },
+            "goldenGuarantee": {
+              "kind": "boolean"
+            },
+            "paymentsParts": {
+              "kind": "array",
+              "items": {
+                "kind": "object",
+                "fields": {
+                  "name": {
+                    "kind": "label",
+                    "max_length": 160
+                  },
+                  "amount": {
+                    "kind": "number"
+                  },
+                  "isSecondary": {
+                    "kind": "boolean"
+                  }
+                }
+              },
+              "max_items": 100
+            }
+          }
+        },
+        "max_items": 100
+      },
+      "fee": {
+        "kind": "number"
+      },
+      "serviceItems": {
+        "kind": "array",
+        "items": {
+          "kind": "object",
+          "fields": {
+            "code": {
+              "kind": "label",
+              "max_length": 160
+            },
+            "name": {
+              "kind": "label",
+              "max_length": 160
+            },
+            "quantity": {
+              "kind": "number"
+            },
+            "unitPrice": {
+              "kind": "number"
+            },
+            "amount": {
+              "kind": "number"
+            }
+          }
+        },
+        "max_items": 100
+      },
+      "extraServicesTotal": {
+        "kind": "number"
+      },
+      "date": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "inventory": {
+        "kind": "number"
+      },
+      "mainPaymentMethod": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "mainPayment": {
+        "kind": "number"
+      },
+      "mixPaymentMethod": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "mixPayment": {
+        "kind": "number"
+      },
+      "total": {
+        "kind": "number"
+      },
+      "cost": {
+        "kind": "number"
+      },
+      "profit": {
+        "kind": "number"
+      },
+      "paymentFeeAmount": {
+        "kind": "number"
+      },
+      "belowCostReviewRequired": {
+        "kind": "boolean"
+      },
+      "belowCostReviewStatus": {
+        "kind": "enum",
+        "values": [
+          "not_required",
+          "pending",
+          "approved",
+          "flagged"
+        ]
+      },
+      "belowCostReviewedAt": {
+        "kind": "date"
+      },
+      "madaReceiptCheck": {
+        "kind": "object",
+        "fields": {
+          "status": {
+            "kind": "enum",
+            "values": [
+              "verified",
+              "needs_review",
+              "verified_manual",
+              "rejected_manual"
+            ]
+          },
+          "expectedAmount": {
+            "kind": "number"
+          },
+          "extractedAmount": {
+            "kind": "number"
+          },
+          "receiptOccurredAt": {
+            "kind": "date"
+          },
+          "receiptOccurredAts": {
+            "kind": "array",
+            "items": {
+              "kind": "date"
+            },
+            "max_items": 100
+          },
+          "duplicateInvoiceNumber": {
+            "kind": "number"
+          },
+          "duplicateInvoiceCode": {
+            "kind": "label",
+            "max_length": 160
+          },
+          "reader": {
+            "kind": "enum",
+            "values": [
+              "local",
+              "gemini"
+            ]
+          },
+          "geminiStatus": {
+            "kind": "enum",
+            "values": [
+              "disabled",
+              "missing_key",
+              "not_needed",
+              "used",
+              "failed"
+            ]
+          },
+          "checkedAt": {
+            "kind": "date"
+          },
+          "verifiedAt": {
+            "kind": "date"
+          },
+          "reviewedBy": {
+            "kind": "reference",
+            "query": false
+          },
+          "reviewedAt": {
+            "kind": "date"
+          }
+        }
+      },
+      "bonus": {
+        "kind": "number"
+      },
+      "bonusHistory": {
+        "kind": "number"
+      },
+      "cashHistory": {
+        "kind": "number"
+      },
+      "netProfit": {
+        "kind": "number"
+      },
+      "oldBattery": {
+        "kind": "boolean"
+      },
+      "carBrand": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "carModel": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "carYear": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "maker": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "size": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "shortId": {
+        "kind": "reference",
+        "query": false
+      },
+      "vinStatus": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "paymentsParts": {
+        "kind": "array",
+        "items": {
+          "kind": "object",
+          "fields": {
+            "name": {
+              "kind": "label",
+              "max_length": 160
+            },
+            "amount": {
+              "kind": "number"
+            },
+            "isSecondary": {
+              "kind": "boolean"
+            }
+          }
+        },
+        "max_items": 100
+      },
+      "occurredAt": {
+        "kind": "date"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "separatedinventorymigrations": {
+    "kind": "object",
+    "fields": {
+      "status": {
+        "kind": "enum",
+        "values": [
+          "running",
+          "complete"
+        ]
+      },
+      "targetUserId": {
+        "kind": "reference",
+        "query": false
+      },
+      "targetEmail": {
+        "kind": "email",
+        "query": false
+      },
+      "migratedProductCount": {
+        "kind": "number"
+      },
+      "migratedQuantity": {
+        "kind": "number"
+      },
+      "completedAt": {
+        "kind": "date"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "shortidaliases": {
+    "kind": "object",
+    "fields": {
+      "shortID": {
+        "kind": "reference",
+        "query": false
+      },
+      "alts": {
+        "kind": "array",
+        "items": {
+          "kind": "label",
+          "max_length": 160
+        },
+        "max_items": 100
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "sitecontents": {
+    "kind": "object",
+    "fields": {
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "smsmessages": {
+    "kind": "object",
+    "fields": {
+      "userId": {
+        "kind": "reference",
+        "query": false
+      },
+      "bridgeId": {
+        "kind": "number"
+      },
+      "date": {
+        "kind": "date"
+      },
+      "type": {
+        "kind": "number"
+      },
+      "matchedFilters": {
+        "kind": "array",
+        "items": {
+          "kind": "object",
+          "fields": {
+            "id": {
+              "kind": "number"
+            },
+            "name": {
+              "kind": "label",
+              "max_length": 160
+            }
+          }
+        },
+        "max_items": 100
+      },
+      "syncedAt": {
+        "kind": "date"
+      },
+      "terminalReceiptId": {
+        "kind": "reference",
+        "query": false
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "smssyncstates": {
+    "kind": "object",
+    "fields": {
+      "userId": {
+        "kind": "reference",
+        "query": false
+      },
+      "lastId": {
+        "kind": "number"
+      },
+      "lastRunAt": {
+        "kind": "date"
+      },
+      "lastOkAt": {
+        "kind": "date"
+      },
+      "totalSynced": {
+        "kind": "number"
+      },
+      "accountingStartAt": {
+        "kind": "date"
+      },
+      "visaFilterId": {
+        "kind": "number"
+      },
+      "visaFilterName": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "visaCreditLimit": {
+        "kind": "number"
+      },
+      "visaBalanceAdjustment": {
+        "kind": "number"
+      },
+      "visaBalanceAdjustmentFilterId": {
+        "kind": "number"
+      },
+      "visaBalanceAdjustmentSource": {
+        "kind": "enum",
+        "values": [
+          "bank",
+          "activity"
+        ]
+      },
+      "fuelVisaFilterId": {
+        "kind": "number"
+      },
+      "fuelVisaFilterName": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "fuelVisaCreditLimit": {
+        "kind": "number"
+      },
+      "creditFilterId": {
+        "kind": "number"
+      },
+      "creditFilterName": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "stcPayFilterId": {
+        "kind": "number"
+      },
+      "stcPayFilterName": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "stcPayOpeningBalance": {
+        "kind": "number"
+      },
+      "stcPayOpeningAt": {
+        "kind": "date"
+      },
+      "stcPayConfiguredBy": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "moyasarFilterId": {
+        "kind": "number"
+      },
+      "moyasarFilterName": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "stcpayreceiptclaims": {
+    "kind": "object",
+    "fields": {
+      "receiptKey": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "invoiceCode": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "userId": {
+        "kind": "reference",
+        "query": false
+      },
+      "amount": {
+        "kind": "number"
+      },
+      "occurredAt": {
+        "kind": "date"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "technicianinventorybalances": {
+    "kind": "object",
+    "fields": {
+      "productId": {
+        "kind": "reference",
+        "query": false
+      },
+      "userId": {
+        "kind": "reference",
+        "query": false
+      },
+      "quantity": {
+        "kind": "number"
+      },
+      "reservedQuantity": {
+        "kind": "number"
+      },
+      "lastUnitCost": {
+        "kind": "number"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "technicianinventorymovements": {
+    "kind": "object",
+    "fields": {
+      "productId": {
+        "kind": "reference",
+        "query": false
+      },
+      "userId": {
+        "kind": "reference",
+        "query": false
+      },
+      "type": {
+        "kind": "enum",
+        "values": [
+          "opening",
+          "receipt",
+          "transfer_out",
+          "transfer_in",
+          "pos_sale",
+          "website_reserve",
+          "website_release",
+          "website_fulfillment",
+          "adjustment"
+        ]
+      },
+      "quantityDelta": {
+        "kind": "number"
+      },
+      "reservedDelta": {
+        "kind": "number"
+      },
+      "counterpartyUserId": {
+        "kind": "reference",
+        "query": false
+      },
+      "orderId": {
+        "kind": "reference",
+        "query": false
+      },
+      "saleOperationId": {
+        "kind": "reference",
+        "query": false
+      },
+      "unitCost": {
+        "kind": "number"
+      },
+      "actorUserId": {
+        "kind": "reference",
+        "query": false
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "warrantypayments": {
+    "kind": "object",
+    "fields": {
+      "paymentId": {
+        "kind": "reference",
+        "query": false
+      },
+      "status": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "invoiceCode": {
+        "kind": "label",
+        "max_length": 160
+      },
+      "invoiceNumber": {
+        "kind": "number"
+      },
+      "invoiceMatched": {
+        "kind": "boolean"
+      },
+      "amountSar": {
+        "kind": "number"
+      },
+      "customerPhone": {
+        "kind": "phone",
+        "query": false
+      },
+      "paidAt": {
+        "kind": "date"
+      },
+      "createdByUserId": {
+        "kind": "reference",
+        "query": false
+      },
+      "saleOperationId": {
+        "kind": "reference",
+        "query": false
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  },
+  "websiteorderfulfillments": {
+    "kind": "object",
+    "fields": {
+      "orderId": {
+        "kind": "reference",
+        "query": false
+      },
+      "state": {
+        "kind": "enum",
+        "values": [
+          "allocating",
+          "reserved",
+          "fulfilled",
+          "released",
+          "manual_review"
+        ]
+      },
+      "assignments": {
+        "kind": "array",
+        "items": {
+          "kind": "object",
+          "fields": {
+            "productId": {
+              "kind": "reference",
+              "query": false
+            },
+            "userId": {
+              "kind": "reference",
+              "query": false
+            },
+            "quantity": {
+              "kind": "number"
+            },
+            "status": {
+              "kind": "enum",
+              "values": [
+                "reserved",
+                "fulfilled",
+                "released"
+              ]
+            },
+            "unitCost": {
+              "kind": "number"
+            }
+          }
+        },
+        "max_items": 100
+      },
+      "bonusProcessedAt": {
+        "kind": "date"
+      },
+      "_id": {
+        "kind": "id"
+      },
+      "createdAt": {
+        "kind": "date"
+      },
+      "updatedAt": {
+        "kind": "date"
+      }
+    }
+  }
+}

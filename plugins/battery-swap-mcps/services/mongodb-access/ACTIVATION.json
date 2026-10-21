@@ -1,0 +1,214 @@
+{
+  "status": "LOCAL_READ_RUNTIME_REVIEW_READY_NOT_DEPLOYED",
+  "database": "test",
+  "database_confirmation_required": false,
+  "namespace_evidence": {
+    "source": "abdulrhmanalhur/Battery-Swap-V2:src/lib/db/mongoose.ts",
+    "blob_sha": "ff70cb202b7057e6878480231d38981502a6e3cd",
+    "selection": "MONGO_DB_NAME or private MONGO_URI default database; no fixed production name in public source",
+    "secret_sources_not_read": true,
+    "atlas_browser_confirmation": {
+      "source_thread": "01a154ca-4931-7212-a741-35aa2661c0c3",
+      "reported_by_parent": true,
+      "project_id": "69cd58b657e3ebb03722b5ba",
+      "cluster": "Cluster0",
+      "database": "test",
+      "collection_count": 57,
+      "collection_examples": [
+        "products",
+        "carbatteries",
+        "carcatalogs",
+        "websiteorderfulfillments"
+      ],
+      "url": "https://cloud.mongodb.com/v2/69cd58b657e3ebb03722b5ba#/explorer/69cd5a25685d41c6e3a21bb5/test",
+      "records_opened": false
+    }
+  },
+  "scope": {
+    "database": "exact confirmed store production database only",
+    "collections": "all57 browser-confirmed business collections with typed field policy; explicit free-text/auth/Mixed exclusions",
+    "reads": [
+      "bounded find",
+      "count"
+    ],
+    "writes": [],
+    "denied": [
+      "bulk changes",
+      "drop database/collection",
+      "insert",
+      "DDL",
+      "user/role management",
+      "arbitrary connect/switch",
+      "raw runCommand",
+      "arbitrary aggregate pipeline",
+      "all update/delete/insert tools",
+      "write proposals in read runtime"
+    ]
+  },
+  "reader": {
+    "proposed_service": "batteryswap-mongo-read.service",
+    "proposed_loopback": "127.0.0.1:8018",
+    "public_resource": "https://mcpgooads.batteryswap.cc/mongodb/mcp",
+    "database_identity": "dedicated read-only identity on the confirmed database; no writer credentials on the reader host",
+    "client_authentication": "Dedicated GitHub OAuth App; numeric owner108840765; empty upstream scopes; local mongodb:read; S256 PKCE and resource-bound JWT; DCR plus allowlisted ChatGPT CIMD",
+    "clients": [
+      "Codex",
+      "Claude Code",
+      "Claude Desktop/Web remote connector as supported"
+    ],
+    "root_404_cause": "No stable /mongodb/mcp location declared; a different MongoDB-prefixed location points to127.0.0.1:8007. Variable route values not disclosed or reused.",
+    "legacy_service": "keep --readOnly; no mode change or restart now"
+  },
+  "trusted_writer": {
+    "location": null,
+    "location_confirmation_required": true,
+    "simplest_isolation": "one small owner-administered executor/approval service in an independent host/project with no Codex/Claude root, deployment or credential access",
+    "database_identity": "separate custom privilege set find/update/remove on the confirmed database business collections; no insert/drop/admin rights; credentials stay only in this trust boundary",
+    "human_approval": "independent owner UI with per-operation user verification/presence, preferably WebAuthn; signed short-lived approval bound to exact immutable plan hash, snapshot reference, requester, nonce and expiry",
+    "executor_access": "private approval delivery only; no MCP approve/execute tool and no raw writer endpoint for either AI client",
+    "atomicity": "production adapter must provide atomic snapshot/CAS or transaction semantics plus durable one-use execution ledger; unknown outcomes require reconciliation, no automatic retry",
+    "activation_status": "DISABLED; not required for read-only phase"
+  },
+  "security_changes_requiring_explicit_approval": [
+    "Create dedicated GitHub OAuth App with exact homepage/callback, empty scopes, owner108840765 only",
+    "Create MongoDB user batteryswap-mcp-reader with read on test only; owner privately enters its URI and dedicated app credentials",
+    "Publish reviewed isolated read source/runtime through approved authoritative workflow; new /opt source needs registration before deployment",
+    "Install/start only proposed batteryswap-mongo-read.service; no writer service or credentials",
+    "Add isolated Nginx locations and new rate-limit zone only after freshest config diff and nginx -t; graceful reload requires approval and neighboring connector smoke checks",
+    "Register/authenticate Codex and Claude connections to the read URL; no broad redirect allowlist changes",
+    "No network allowlist change included; if current approved server egress is blocked, stop and review a separate exact-IP change"
+  ],
+  "guarantee_limit": "With current root SSH or deployment access to any environment holding write credentials or approval code, system-wide no-bypass cannot be claimed. Isolation on the same root-controlled server is insufficient.",
+  "rollback": [
+    "Disable only the new MongoDB client entry/route and stop only the new reader",
+    "Keep all writes disabled; revoke proposal relay access without executing pending proposals",
+    "Preserve durable approval/execution ledger and reconcile unknown outcomes; never replay a write as rollback",
+    "Restore only changed routing/configuration via freshness/CAS checks; preserve existing services and other11 connectors"
+  ],
+  "local_prototype_limits": [
+    "Read runtime implemented and tested offline; no live DB or OAuth-browser interoperability test yet",
+    "Linux72-wheel hashes and dependency metadata verified; no Linux execution or nginx/systemd syntax execution yet",
+    "Existing proposal/writer classes remain fixture research only and are not registered or deployed by read runtime",
+    "Current root/CI/deployment access to other writer environments remains outside this connector guarantee"
+  ],
+  "nonproduction_validation": {
+    "tests_pass": 53,
+    "database_fixture": "fixture_store",
+    "keys": "ephemeral in-memory test keys only",
+    "MongoDB_network_calls": 0,
+    "warnings": "AnyIO in-memory stream ResourceWarning in fixture HTTP harness; no production/network DB connection",
+    "linux_runtime": "72 wheels SHA256 and Python3.10/Linux dependency closure verified offline; no Linux execution"
+  },
+  "production_changes_performed": [],
+  "Atlas_monitor": "separate; no activation or PR1 merge authorized",
+  "read_only_phase": {
+    "database": "test",
+    "enabled_tools": [
+      "find",
+      "count"
+    ],
+    "token_scopes": [
+      "mongodb:read"
+    ],
+    "proposal_relay": null,
+    "writer_credentials": false,
+    "writer_service": false,
+    "approval_service": false,
+    "production_adapter_still_required": false,
+    "oauth_issuer_owner_subject_and_client_ids": {
+      "issuer": "https://mcpgooads.batteryswap.cc/mongodb/auth",
+      "owner_github_login": "abdulrhmanalhur",
+      "owner_github_id": 108840765,
+      "identity_verified_public_api": "https://api.github.com/users/abdulrhmanalhur",
+      "github_app": "NEW dedicated BatterySwap MongoDB Read app; creation requires approval",
+      "github_homepage": "https://mcpgooads.batteryswap.cc/mongodb/auth/consent",
+      "github_callback": "https://mcpgooads.batteryswap.cc/mongodb/auth/callback",
+      "upstream_scopes": [],
+      "downstream_scopes": [
+        "mongodb:read"
+      ],
+      "authorize": "https://mcpgooads.batteryswap.cc/mongodb/auth/authorize",
+      "token": "https://mcpgooads.batteryswap.cc/mongodb/auth/token",
+      "registration": "https://mcpgooads.batteryswap.cc/mongodb/auth/register",
+      "consent": "https://mcpgooads.batteryswap.cc/mongodb/auth/consent",
+      "authorization_metadata": "https://mcpgooads.batteryswap.cc/.well-known/oauth-authorization-server/mongodb/auth",
+      "resource_metadata": "https://mcpgooads.batteryswap.cc/.well-known/oauth-protected-resource/mongodb/mcp",
+      "client_registration": "local DCR for loopback Codex/Claude Code and supported remote clients; ChatGPT-only allowlisted CIMD; every grant still needs owner GitHub verification and consent",
+      "actual_client_browser_login_test": "pending approved deployment, no live login performed"
+    },
+    "db_identity": {
+      "proposed_username": "batteryswap-mcp-reader",
+      "role": "read",
+      "role_database": "test",
+      "scope": "business collections only through fixed-namespace gateway; review all57 collection names and field exposure before first document read"
+    },
+    "deployment": {
+      "source": "reviewed Git PR in battery-swap-marketplace; no merge/push/deploy authorized",
+      "reader_target": "94.176.182.121; proposed service batteryswap-mongo-read.service; loopback127.0.0.1:8018 availability not verified",
+      "gateway": "mcpgooads.batteryswap.cc; add exact authenticated /mongodb/mcp and required OAuth metadata routes only after issuer selection; preserve other connectors",
+      "legacy": "do not reuse hidden alias or loosen --readOnly; audit/restrict old entry points in separately reviewed exact diff"
+    },
+    "secrets": {
+      "entry": "owner enters via Atlas UI and non-logged secure local prompt; never chat, screenshots, CLI arguments, repository or assistant output",
+      "proposed_file": "/etc/batteryswap-mongo-read/mongodb-uri",
+      "permissions": "root-owned directory0700 and file0600; systemd LoadCredential for reader service; URI includes explicit test and credentials for read-only user only",
+      "oauth": "issuer/client setup pending; owner enters any confidential client secret privately; prefer PKCE public clients where supported",
+      "validation": "check file existence/permissions and authentication success only, never print values"
+    },
+    "rollback": "disable new route/client and stop new reader only; preserve all unrelated services and configs",
+    "activation_approval_status": "NOT_REQUESTED_OR_GRANTED",
+    "initial_field_policy": {
+      "collection_count": 57,
+      "public_model_count": 57,
+      "approved_top_level_fields": 715,
+      "excluded_fields_or_branches": 115,
+      "source_commit": "a71824819f80cd6ce97c74e216f8b11a1a0f3fb1",
+      "policy": "read-policy.json",
+      "evidence": "POLICY-EVIDENCE.json",
+      "data_recipients": [
+        "owner-authorized Codex/OpenAI session",
+        "owner-authorized Claude/Anthropic session"
+      ],
+      "financial_personal_categories": "see ACTIVATION-APPROVAL.md",
+      "metadata_only": [
+        "sitecontents",
+        "attribution_customer_locks",
+        "madareceiptminutelocks"
+      ],
+      "masked_contacts": "phone last4/email domain and stable SHA256 references; not strong anonymization",
+      "label_queries": false,
+      "masked_reference_queries": false
+    },
+    "limits": {
+      "max_documents": 100,
+      "max_output_bytes": 1048576,
+      "max_query_bytes": 8192,
+      "query_depth": 4,
+      "query_keys": 20,
+      "server_query_deadline_ms": 3000,
+      "concurrent_db_calls": 2,
+      "client_instances": 1,
+      "workers": 1,
+      "pool_per_server": 2,
+      "min_pool": 0,
+      "max_connecting": 1,
+      "read_retries": false,
+      "write_retries": false,
+      "monitoring_sockets": "additional PyMongo replica-set monitor connections; maxPoolSize2 is not a total connection cap",
+      "http_body_bytes": 65536,
+      "http_inflight": 16,
+      "nginx_proposed_per_ip_rate": "2r/s; burst4 MCP, burst12 auth"
+    },
+    "oauth_storage_limits": {
+      "clients": 64,
+      "transactions": 128,
+      "codes": 128,
+      "refresh": 128,
+      "upstream": 128,
+      "jti": 512,
+      "max_record_bytes": 65536,
+      "persistent_encrypted_quota_index": true,
+      "single_worker": true
+    }
+  }
+}

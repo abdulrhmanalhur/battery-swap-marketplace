@@ -1,0 +1,1699 @@
+{
+  "repository": "https://github.com/abdulrhmanalhur/Battery-Swap-V2",
+  "commit": "a71824819f80cd6ce97c74e216f8b11a1a0f3fb1",
+  "browser_thread": "01a154ca-4931-7212-a741-35aa2661c0c3",
+  "collection_count": 57,
+  "models": {
+    "arabicbrandmaps": {
+      "model": "ArabicBrandMap",
+      "source": "src/lib/db/models/ArabicBrandMap.ts",
+      "source_sha256": "dbad7be0f3c2afb11ae2bd0ecedc7f28b095c3589f63faff19daef41d6336caf",
+      "approved_top_fields": [
+        "arabic",
+        "latin",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "attribution_contacts": {
+      "model": "AttributionContact",
+      "source": "src/lib/db/models/AttributionContact.ts",
+      "source_sha256": "bc97fa6b94b6d155edb2f226502cdafac5bb9b5699baf4a8826a6548ba4910cd",
+      "approved_top_fields": [
+        "leadId",
+        "bindingStatus",
+        "firstObservedAt",
+        "lastObservedAt",
+        "leadCreatedAt",
+        "previousLeadStatus",
+        "managesSoldStatus",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "attribution_events": {
+      "model": "AttributionEvent",
+      "source": "src/lib/db/models/AttributionContact.ts",
+      "source_sha256": "bc97fa6b94b6d155edb2f226502cdafac5bb9b5699baf4a8826a6548ba4910cd",
+      "approved_top_fields": [
+        "eventId",
+        "eventType",
+        "occurredAt",
+        "outcome",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "attribution_customer_locks": {
+      "model": "AttributionCustomerLock",
+      "source": "src/lib/db/models/AttributionContact.ts",
+      "source_sha256": "bc97fa6b94b6d155edb2f226502cdafac5bb9b5699baf4a8826a6548ba4910cd",
+      "approved_top_fields": [
+        "revision",
+        "_id"
+      ]
+    },
+    "attribution_leads": {
+      "model": "AttributionLead",
+      "source": "src/lib/db/models/AttributionLead.ts",
+      "source_sha256": "c92ed05c1b690b648539798c475f9a827070adc3e76d7832724aefc508008ead",
+      "approved_top_fields": [
+        "leadId",
+        "channel",
+        "status",
+        "placement",
+        "language",
+        "expiresAt",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "attribution_sales": {
+      "model": "AttributionSale",
+      "source": "src/lib/db/models/AttributionSale.ts",
+      "source_sha256": "f4420236c282e48da5432d78d699d6a4541d20febe5a5a0ef02327ed9ca62b0a",
+      "approved_top_fields": [
+        "saleKey",
+        "invoiceSource",
+        "saleStatus",
+        "category",
+        "firstSentAt",
+        "lastSentAt",
+        "evidenceCount",
+        "invoiceVerified",
+        "invoiceIssuedAt",
+        "invoiceValue",
+        "attributionStatus",
+        "attributionMethod",
+        "leadId",
+        "campaignId",
+        "hasGoogleClickId",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "banktransactions": {
+      "model": "BankTransaction",
+      "source": "src/lib/db/models/BankTransaction.ts",
+      "source_sha256": "31ffa0a3d877e837f417d61a2aa2d2d9328f2326c3c7647af464e2132eb6e71b",
+      "approved_top_fields": [
+        "userId",
+        "bridgeId",
+        "kind",
+        "direction",
+        "amount",
+        "currency",
+        "remainingAllowance",
+        "fees",
+        "counterparty",
+        "cardLast4",
+        "viaBank",
+        "occurredAt",
+        "matchStatus",
+        "matchedInvoiceId",
+        "matchedAt",
+        "expenseStatus",
+        "creditOperationId",
+        "expenseReviewedBy",
+        "expenseReviewedAt",
+        "topupStatus",
+        "topupOperationId",
+        "topupReversalOperationId",
+        "filterIds",
+        "sourceScope",
+        "reviewStatus",
+        "reviewSentAt",
+        "reviewChatId",
+        "reviewSourceAccount",
+        "reviewSettlementAmount",
+        "reviewSettlementOperationId",
+        "reviewTerminalNoticeId",
+        "reviewCategory",
+        "reviewDeductProfit",
+        "reviewedAt",
+        "reviewedBy",
+        "reviewInvoiceAttachedAt",
+        "reviewInvoiceBatchId",
+        "reviewManualPurchaseId",
+        "reviewManualCreditOperationId",
+        "reviewManualAdjustmentOperationId",
+        "reviewDebitVerified",
+        "reviewMatchIssue",
+        "salaryOffsetAmount",
+        "salaryOffsetAppliedAt",
+        "parsedBy",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "bannertexts": {
+      "model": "BannerText",
+      "source": "src/lib/db/models/BannerText.ts",
+      "source_sha256": "cf727c386294b58627363bdda6eb40b61eb06a4168af96b43993d2f96e7e182c",
+      "approved_top_fields": [
+        "language",
+        "enabled",
+        "order",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "bonusoperations": {
+      "model": "BonusOperation",
+      "source": "src/lib/db/models/BonusOperation.ts",
+      "source_sha256": "ab3981fc16b26738a7dc3cad1ca10ae7d64394d509131c9a90703cfa70f95f0f",
+      "approved_top_fields": [
+        "userId",
+        "kind",
+        "delta",
+        "balanceAfter",
+        "actorUserId",
+        "occurredAt",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "bonusroles": {
+      "model": "BonusRoles",
+      "source": "src/lib/db/models/BonusRoles.ts",
+      "source_sha256": "de603e5a7515ca70df05ed640cd4451124616589a1ae81e0d3e5bb38b58a8912",
+      "approved_top_fields": [
+        "userId",
+        "bonusDisabled",
+        "rules",
+        "afterSaleBonusRule",
+        "isPerProduct",
+        "active24Hours",
+        "active24HoursHalfBonus",
+        "startHour",
+        "startMinute",
+        "endHour",
+        "endMinute",
+        "alwaysActiveDays",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "bonusstates": {
+      "model": "BonusState",
+      "source": "src/lib/db/models/BonusState.ts",
+      "source_sha256": "797a63ea70d7e5efacf0295a8ecf09ac71b817a0a33c1748146e6180d2d02371",
+      "approved_top_fields": [
+        "userId",
+        "balance",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "carbatteries": {
+      "model": "CarBatteries",
+      "source": "src/lib/db/models/CarBatteries.ts",
+      "source_sha256": "3c8ce5a0c1fdffe438b6b2ac7aeecc7ca68adf2e854456b266b62f7ef5e955a3",
+      "approved_top_fields": [
+        "make",
+        "model",
+        "year",
+        "batteries",
+        "_id"
+      ]
+    },
+    "carcatalogs": {
+      "model": "CarCatalog",
+      "source": "src/lib/db/models/CarCatalog.ts",
+      "source_sha256": "90feba5d057f7fd2c4d7d61f5389e018a818542c4af4ebbc69dd64fdcb574c80",
+      "approved_top_fields": [
+        "makeSlug",
+        "make",
+        "makeAr",
+        "makeNameAr",
+        "slug",
+        "model",
+        "modelAr",
+        "modelNameAr",
+        "active",
+        "referenceVersion",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "carfitments": {
+      "model": "CarFitment",
+      "source": "src/lib/db/models/CarFitment.ts",
+      "source_sha256": "cf1405993191acd6a839e514fe0c80132d1a432d1ac74a62e5b6c2bea308385e",
+      "approved_top_fields": [
+        "makeSlug",
+        "modelSlug",
+        "make",
+        "model",
+        "year",
+        "code",
+        "codeKey",
+        "ah",
+        "directions",
+        "heights",
+        "support",
+        "sources",
+        "verified",
+        "reviewed",
+        "aliasOf",
+        "firstSeenAt",
+        "lastSeenAt",
+        "status",
+        "issues",
+        "adminEdited",
+        "aliasDecision",
+        "syncedAt",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "carfitmentsources": {
+      "model": "CarFitmentSource",
+      "source": "src/lib/db/models/CarFitmentSource.ts",
+      "source_sha256": "9eb401878e84fde9a163963d7dd0f58bcea8be90a23481aba03d07a437bc8035",
+      "approved_top_fields": [
+        "records",
+        "newestRecordAt",
+        "origin",
+        "receivedAt",
+        "lastRun",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "cashoperations": {
+      "model": "CashOperation",
+      "source": "src/lib/db/models/CashOperation.ts",
+      "source_sha256": "e0fd756c808f77c201dc1c31abd2b04485d2aa8f6273615825b2988caaff428e",
+      "approved_top_fields": [
+        "userId",
+        "kind",
+        "delta",
+        "balanceAfter",
+        "actorUserId",
+        "occurredAt",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "cashstates": {
+      "model": "CashState",
+      "source": "src/lib/db/models/CashState.ts",
+      "source_sha256": "01693acf19896f4dde5c3b94bf575e833dcf807a975331575241296445be0a5c",
+      "approved_top_fields": [
+        "userId",
+        "balance",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "contactmessagelimits": {
+      "model": "ContactMessageLimit",
+      "source": "src/lib/db/models/ContactMessageLimit.ts",
+      "source_sha256": "672dc8eb3b3b1da1c3078168ba197c014a514324ee33a31ca7c7e9bd3f9be6ca",
+      "approved_top_fields": [
+        "day",
+        "count",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "counters": {
+      "model": "Counter",
+      "source": "src/lib/db/models/Counter.ts",
+      "source_sha256": "feb46a1fe267258f1be7eb3b355ea6ad54bfc25bda3d7510f76aaa181da12bd4",
+      "approved_top_fields": [
+        "seq",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "creditoperations": {
+      "model": "CreditOperation",
+      "source": "src/lib/db/models/CreditOperation.ts",
+      "source_sha256": "cdf2c4ea75160064fd4cd6a07e7fea223a37188bcfe6bf2ec5e4ac8826ce77be",
+      "approved_top_fields": [
+        "userId",
+        "kind",
+        "delta",
+        "balanceAfter",
+        "actorUserId",
+        "inventoryMatchedOutgoingTransactionId",
+        "reversesCreditOperationId",
+        "bankTransactionId",
+        "occurredAt",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "creditstates": {
+      "model": "CreditState",
+      "source": "src/lib/db/models/CreditState.ts",
+      "source_sha256": "36ede4af19d63243f78bad53728a11b73ad127c7f471b4db33812543c890d827",
+      "approved_top_fields": [
+        "userId",
+        "balance",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "depositpayments": {
+      "model": "DepositPayment",
+      "source": "src/lib/db/models/DepositPayment.ts",
+      "source_sha256": "411a93d0c4e07669a5edc96de0150164598daac61ac07c31caccf0ad6fb982be",
+      "approved_top_fields": [
+        "paymentId",
+        "amount",
+        "customerPhone",
+        "technicianNumber",
+        "paidAt",
+        "consumedByInvoice",
+        "consumedAt",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "discountcodes": {
+      "model": "DiscountCode",
+      "source": "src/lib/db/models/DiscountCode.ts",
+      "source_sha256": "16467510b26587af0439fa999c3bf31e1be6f8c3a1d977a85c0f3118792aa33a",
+      "approved_top_fields": [
+        "giftCardName",
+        "denominationTitle",
+        "sellingPrice",
+        "expirationDate",
+        "faceValue",
+        "percentage",
+        "discountType",
+        "creationDate",
+        "usedAt",
+        "autoGenerated",
+        "orderId",
+        "orderAmount",
+        "reserved",
+        "reservedAt",
+        "reservedByRole",
+        "reservedOrderId",
+        "usageType",
+        "used",
+        "exported",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "discountsettings": {
+      "model": "DiscountSettings",
+      "source": "src/lib/db/models/DiscountSettings.ts",
+      "source_sha256": "2aca3f9a7d9b137d205922c086409fe4f06803dd559299a26b8a0f88b62db528",
+      "approved_top_fields": [
+        "codesDisabled",
+        "updatedByUserId",
+        "updatedByEmail",
+        "updatedAtIso",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "externalfinanceaccountoperations": {
+      "model": "ExternalFinanceAccountOperation",
+      "source": "src/lib/db/models/ExternalFinanceAccountOperation.ts",
+      "source_sha256": "03746cd70c19e59ac59f8e4d923278151f8c8bb1426e7940e241a13e89c293b8",
+      "approved_top_fields": [
+        "userId",
+        "kind",
+        "delta",
+        "balanceAfter",
+        "actorUserId",
+        "sourceKey",
+        "occurredAt",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "externalfinanceaccountstates": {
+      "model": "ExternalFinanceAccountState",
+      "source": "src/lib/db/models/ExternalFinanceAccountState.ts",
+      "source_sha256": "cb0219775c55d48be61cb1af15840ef715d541f39d48525224c48362235cc887",
+      "approved_top_fields": [
+        "userId",
+        "balance",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "herocarouselslides": {
+      "model": "HeroCarouselSlide",
+      "source": "src/lib/db/models/HeroCarouselSlide.ts",
+      "source_sha256": "5daa378c1d869a7a4c6618234f6f19e3545c67bef48d3a45c7f161b21352a287",
+      "approved_top_fields": [
+        "alt",
+        "enabled",
+        "order",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "inventorycostcycles": {
+      "model": "InventoryCostCycle",
+      "source": "src/lib/db/models/InventoryCostCycle.ts",
+      "source_sha256": "cb92342dd31e5699141a82b29109e7a63c0dc739ceb3a11929c473763e7930d0",
+      "approved_top_fields": [
+        "requestId",
+        "startedAt",
+        "startedByUserId",
+        "startedByEmail",
+        "active",
+        "previousCycleId",
+        "pendingTrackerCount",
+        "pendingInvoiceCount",
+        "pendingQuantity",
+        "negativeProducts",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "inventorysalecosts": {
+      "model": "InventorySaleCost",
+      "source": "src/lib/db/models/InventorySaleCost.ts",
+      "source_sha256": "707027fdec7de8c9da2c6275aca3f2110b65610a619a1bf26705cfe3dc434ac2",
+      "approved_top_fields": [
+        "saleOperationId",
+        "invoiceNumber",
+        "invoiceCode",
+        "createdByUserId",
+        "saleOccurredAt",
+        "saleLineIndex",
+        "productId",
+        "ownerUserId",
+        "productName",
+        "quantitySold",
+        "provisionalUnitCost",
+        "pendingQuantity",
+        "deficitOnly",
+        "allocations",
+        "corrections",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "inventoryscrapexclusions": {
+      "model": "InventoryScrapExclusion",
+      "source": "src/lib/db/models/InventoryScrapExclusion.ts",
+      "source_sha256": "c9188ee25c56b617cf5f3a5ed35c688df4f991b239288e81a4e59208c77b4a95",
+      "approved_top_fields": [
+        "userId",
+        "saleOperationId",
+        "saleLineIndex",
+        "ignored",
+        "reviewedByUserId",
+        "returnFlagClearedAt",
+        "returnFlagClearedByUserId",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "inventorysourcelots": {
+      "model": "InventorySourceLot",
+      "source": "src/lib/db/models/InventorySourceLot.ts",
+      "source_sha256": "75f786f05ec76d7a0a9e6cc1ef8771929f53890a3f9ee4cc42cc1ad083b30f4c",
+      "approved_top_fields": [
+        "productId",
+        "ownerUserId",
+        "productName",
+        "sourceType",
+        "originKey",
+        "purchaseBatchId",
+        "purchaseOperationId",
+        "receivedAt",
+        "unitCost",
+        "quantityReceived",
+        "quantityRemaining",
+        "createdByUserId",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "inventoryupdatebatches": {
+      "model": "InventoryUpdateBatch",
+      "source": "src/lib/db/models/InventoryUpdateBatch.ts",
+      "source_sha256": "cc2f65cfc9b0d716e3ba1a7abbe4341322b23b137c916193ce499460591767fc",
+      "approved_top_fields": [
+        "userId",
+        "occurredAt",
+        "supplierName",
+        "supplierPhone",
+        "vatAddedToLineCosts",
+        "source",
+        "manualRequestId",
+        "totalPurchase",
+        "items",
+        "mainPaymentMethod",
+        "mainPayment",
+        "mixPaymentMethod",
+        "mixPayment",
+        "cashDelta",
+        "cashOperationId",
+        "creditDelta",
+        "creditOperationId",
+        "smsSettlementAmount",
+        "invoiceEdits",
+        "matchedOutgoingTransactionId",
+        "undoneAt",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "madareceiptminutelocks": {
+      "model": "MadaReceiptMinuteLock",
+      "source": "src/lib/db/models/MadaReceiptMinuteLock.ts",
+      "source_sha256": "53c145663a4f988dafb1e44f661211bbea1acd72e04aa6a38e491043b5ddad5b",
+      "approved_top_fields": [
+        "_id",
+        "version"
+      ]
+    },
+    "makers": {
+      "model": "Maker",
+      "source": "src/lib/db/models/Maker.ts",
+      "source_sha256": "2aa3e6f704b07763c6f17cdaa05b5f04866b064103906462c2a5072f888f343a",
+      "approved_top_fields": [
+        "name",
+        "country",
+        "alts",
+        "alwaysVisibleProducts",
+        "lastActivity",
+        "35_HI_L",
+        "35_HI_R",
+        "40-60_HI_L",
+        "40-60_HI_R",
+        "40-60_LW_L",
+        "40-60_LW_R",
+        "62-95_HI_L",
+        "62-95_HI_R",
+        "62-95_LW_L",
+        "62-95_LW_R",
+        "100+_HI_L",
+        "100+_HI_R",
+        "S",
+        "guarantee",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "managerinvoices": {
+      "model": "ManagerInvoice",
+      "source": "src/lib/db/models/ManagerInvoice.ts",
+      "source_sha256": "4d7669258a36eb354651a5846fd3dc5a2e19bf21f76d52fa28458819041a9efa",
+      "approved_top_fields": [
+        "invoiceNumber",
+        "invoiceCode",
+        "invoiceType",
+        "products",
+        "fee",
+        "serviceItems",
+        "extraServicesTotal",
+        "paymentsParts",
+        "discountApplied",
+        "discountAmount",
+        "grossTotal",
+        "netTotal",
+        "belowCostReviewRequired",
+        "belowCostReviewStatus",
+        "belowCostReviewedAt",
+        "madaReceiptCheck",
+        "isCarInfo",
+        "isOldBattery",
+        "LW",
+        "L",
+        "carData",
+        "companyData",
+        "depositCheck",
+        "bankCheck",
+        "stcPayCheck",
+        "creditMode",
+        "createdByUserId",
+        "occurredAt",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "managerusers": {
+      "model": "ManagerUser",
+      "source": "src/lib/db/models/ManagerUser.ts",
+      "source_sha256": "fc8d6677d30b2f1e27c4eca745c04217cb219190a3969e36362f7bd87a324ba0",
+      "approved_top_fields": [
+        "role",
+        "displayName",
+        "lastLoginAt",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "outstandingbalanceoperations": {
+      "model": "OutstandingBalanceOperation",
+      "source": "src/lib/db/models/OutstandingBalanceOperation.ts",
+      "source_sha256": "af45453b1e81f83dc7d07acce7d58d54e587b131431cf1ac35f3ad9486e39f7e",
+      "approved_top_fields": [
+        "userId",
+        "kind",
+        "delta",
+        "balanceAfter",
+        "actorUserId",
+        "occurredAt",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "outstandingbalancestates": {
+      "model": "OutstandingBalanceState",
+      "source": "src/lib/db/models/OutstandingBalanceState.ts",
+      "source_sha256": "188d4f8e1ff0bfb179e53851f0574e52092a3710a7d33f1f90ae2e688bac6e20",
+      "approved_top_fields": [
+        "userId",
+        "balance",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "paymentmethods": {
+      "model": "PaymentMethods",
+      "source": "src/lib/db/models/PaymentMethods.ts",
+      "source_sha256": "da05bc58648bdf06de5b87632b36095117f83c6e67a87889d15a9a4ec6cc4045",
+      "approved_top_fields": [
+        "methods",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "pendingcashinventoryreviews": {
+      "model": "PendingCashInventoryReview",
+      "source": "src/lib/db/models/PendingCashInventoryReview.ts",
+      "source_sha256": "79f7540e170ff14499d302b553fd809d7b533ea0eedb50d8b2330d598d21c35e",
+      "approved_top_fields": [
+        "status",
+        "actorUserId",
+        "actorRole",
+        "financeUserId",
+        "reviewChatId",
+        "reviewedAt",
+        "processingStartedAt",
+        "attemptCount",
+        "purchaseOperationId",
+        "executedAt",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "pendingmanagersales": {
+      "model": "PendingManagerSale",
+      "source": "src/lib/db/models/PendingManagerSale.ts",
+      "source_sha256": "9140748beed59e1db52ff5e3ef04f5e890709741a4f197c7fc98c14b03746a87",
+      "approved_top_fields": [
+        "provider",
+        "status",
+        "phone",
+        "amount",
+        "currency",
+        "actorUserId",
+        "actorRole",
+        "targetUserId",
+        "tabbySessionId",
+        "tabbyPaymentId",
+        "tabbyStatus",
+        "tamaraOrderId",
+        "tamaraCheckoutId",
+        "tamaraStatus",
+        "saleOperationId",
+        "managerInvoiceId",
+        "canceledAt",
+        "completedAt",
+        "cleanedAt",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "products": {
+      "model": "Product",
+      "source": "src/lib/db/models/Product.ts",
+      "source_sha256": "290c2ee735832628994c412c587ebae92fb492974cf7e1531db898040ae5ca4c",
+      "approved_top_fields": [
+        "name",
+        "salesPrice",
+        "recommendedPrice",
+        "cost",
+        "quantity",
+        "lastQuantityAddedAt",
+        "alwaysVisible",
+        "alwaysHidden",
+        "disablePriceEdits",
+        "allowAnyCashPurchasePrice",
+        "disableFeeEdits",
+        "disableMixEdits",
+        "allowZeroPriceOnSale",
+        "defaultOldBattery",
+        "carDetails",
+        "lowestCost",
+        "highestCost",
+        "size",
+        "maker",
+        "shortID",
+        "voltage",
+        "direction",
+        "type",
+        "altShortIDs",
+        "altMakers",
+        "altSizes",
+        "alternativeNames",
+        "originalPrice",
+        "discountPercent",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "productgroups": {
+      "model": "ProductGroup",
+      "source": "src/lib/db/models/ProductGroup.ts",
+      "source_sha256": "c396db327b9f5d3e3cce782d146048e48384e4a39baed5f43bad3a1d51c7972d",
+      "approved_top_fields": [
+        "name",
+        "productIds",
+        "alwaysVisible",
+        "alwaysHidden",
+        "disablePriceEdits",
+        "disableFeeEdits",
+        "disableMixEdits",
+        "allowZeroPriceOnSale",
+        "defaultOldBattery",
+        "carDetails",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "rajhivisabalanceoperations": {
+      "model": "RajhiVisaBalanceOperation",
+      "source": "src/lib/db/models/RajhiVisaBalanceOperation.ts",
+      "source_sha256": "4c86b2cd1d0966ed9fac1a7d6dc0f85b207afe1c0b6fb74748023e89cb1a9e59",
+      "approved_top_fields": [
+        "userId",
+        "kind",
+        "delta",
+        "balanceBefore",
+        "balanceAfter",
+        "baseAvailable",
+        "filterId",
+        "balanceSource",
+        "actorUserId",
+        "occurredAt",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "salarypayments": {
+      "model": "SalaryPayment",
+      "source": "src/lib/db/models/SalaryPayment.ts",
+      "source_sha256": "518593e7366f603facdf5863eeb270709c8bff674f3c92df1df74bad3fdacb78",
+      "approved_top_fields": [
+        "userId",
+        "scheduledDateISO",
+        "cadence",
+        "amount",
+        "source",
+        "cashDeducted",
+        "creditDeducted",
+        "creditAwaitingTransfer",
+        "cashSmsOffset",
+        "creditSmsOffset",
+        "status",
+        "processing",
+        "processingAt",
+        "saleOperationId",
+        "actorUserId",
+        "occurredAt",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "salarysettings": {
+      "model": "SalarySettings",
+      "source": "src/lib/db/models/SalarySettings.ts",
+      "source_sha256": "05bba2fb58db2dad220ebab13eb61503bd5741093568ee4080d6a5e59b780643",
+      "approved_top_fields": [
+        "userId",
+        "active",
+        "amount",
+        "cadence",
+        "weekDay",
+        "monthDay",
+        "source",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "saleoperations": {
+      "model": "SaleOperation",
+      "source": "src/lib/db/models/SaleOperation.ts",
+      "source_sha256": "19b8bfa8b563b05390069f0de530f2483959556cd31ebc613888cc7bcfce4dc1",
+      "approved_top_fields": [
+        "kind",
+        "orderId",
+        "productId",
+        "productName",
+        "quantity",
+        "price",
+        "inventoryBatchId",
+        "inventorySourceType",
+        "inventoryCreditOperationId",
+        "inventoryMatchedOutgoingTransactionId",
+        "createdByUserId",
+        "products",
+        "fee",
+        "serviceItems",
+        "extraServicesTotal",
+        "date",
+        "inventory",
+        "mainPaymentMethod",
+        "mainPayment",
+        "mixPaymentMethod",
+        "mixPayment",
+        "total",
+        "cost",
+        "profit",
+        "paymentFeeAmount",
+        "belowCostReviewRequired",
+        "belowCostReviewStatus",
+        "belowCostReviewedAt",
+        "madaReceiptCheck",
+        "bonus",
+        "bonusHistory",
+        "cashHistory",
+        "netProfit",
+        "oldBattery",
+        "carBrand",
+        "carModel",
+        "carYear",
+        "maker",
+        "size",
+        "shortId",
+        "vinStatus",
+        "paymentsParts",
+        "occurredAt",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "separatedinventorymigrations": {
+      "model": "SeparatedInventoryMigration",
+      "source": "src/lib/db/models/SeparatedInventoryMigration.ts",
+      "source_sha256": "6a496e256c0eb11531129f1c159def487e0f9f3138181f226cbf08042554eb40",
+      "approved_top_fields": [
+        "status",
+        "targetUserId",
+        "targetEmail",
+        "migratedProductCount",
+        "migratedQuantity",
+        "completedAt",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "shortidaliases": {
+      "model": "ShortIdAlias",
+      "source": "src/lib/db/models/ShortIdAlias.ts",
+      "source_sha256": "340d7c4d17379b3c8b4c9355d9446d375d762b8da76dffc09821e496abc97788",
+      "approved_top_fields": [
+        "shortID",
+        "alts",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "sitecontents": {
+      "model": "SiteContent",
+      "source": "src/lib/db/models/SiteContent.ts",
+      "source_sha256": "143931408cfbda650883c7f330167a26521dcf912727a7f6ea9258c7e581d1f2",
+      "approved_top_fields": [
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "smsmessages": {
+      "model": "SmsMessage",
+      "source": "src/lib/db/models/SmsMessage.ts",
+      "source_sha256": "42ed86d58df53fd4bb0d8090cc2f78c068f27aaaf4bda1768b090a030cb87c5f",
+      "approved_top_fields": [
+        "userId",
+        "bridgeId",
+        "date",
+        "type",
+        "matchedFilters",
+        "syncedAt",
+        "terminalReceiptId",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "smssyncstates": {
+      "model": "SmsSyncState",
+      "source": "src/lib/db/models/SmsSyncState.ts",
+      "source_sha256": "587761e05f01fe5cef9a7d1a3f41f46c18102fe8d3b9c1e40504695c5e6f1f95",
+      "approved_top_fields": [
+        "userId",
+        "lastId",
+        "lastRunAt",
+        "lastOkAt",
+        "totalSynced",
+        "accountingStartAt",
+        "visaFilterId",
+        "visaFilterName",
+        "visaCreditLimit",
+        "visaBalanceAdjustment",
+        "visaBalanceAdjustmentFilterId",
+        "visaBalanceAdjustmentSource",
+        "fuelVisaFilterId",
+        "fuelVisaFilterName",
+        "fuelVisaCreditLimit",
+        "creditFilterId",
+        "creditFilterName",
+        "stcPayFilterId",
+        "stcPayFilterName",
+        "stcPayOpeningBalance",
+        "stcPayOpeningAt",
+        "stcPayConfiguredBy",
+        "moyasarFilterId",
+        "moyasarFilterName",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "stcpayreceiptclaims": {
+      "model": "StcPayReceiptClaim",
+      "source": "src/lib/db/models/StcPayReceiptClaim.ts",
+      "source_sha256": "38e70a3ce2b50b6d60f13c35ae48e59561b9d12750579e788106dd260308d2b4",
+      "approved_top_fields": [
+        "receiptKey",
+        "invoiceCode",
+        "userId",
+        "amount",
+        "occurredAt",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "technicianinventorybalances": {
+      "model": "TechnicianInventoryBalance",
+      "source": "src/lib/db/models/TechnicianInventoryBalance.ts",
+      "source_sha256": "6c253fb2b4dc0fe9804075849b672fe8206728f8cfc987d1701236fdff357457",
+      "approved_top_fields": [
+        "productId",
+        "userId",
+        "quantity",
+        "reservedQuantity",
+        "lastUnitCost",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "technicianinventorymovements": {
+      "model": "TechnicianInventoryMovement",
+      "source": "src/lib/db/models/TechnicianInventoryMovement.ts",
+      "source_sha256": "b150df855f18f7136c3419aa4dc10cdd745799d8e6f9dd172280945fbe874b2b",
+      "approved_top_fields": [
+        "productId",
+        "userId",
+        "type",
+        "quantityDelta",
+        "reservedDelta",
+        "counterpartyUserId",
+        "orderId",
+        "saleOperationId",
+        "unitCost",
+        "actorUserId",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "warrantypayments": {
+      "model": "WarrantyPayment",
+      "source": "src/lib/db/models/WarrantyPayment.ts",
+      "source_sha256": "f540227beb02dbdd8c6ba60e40b73a0bc2cce62565a0255566645a12481b7d0c",
+      "approved_top_fields": [
+        "paymentId",
+        "status",
+        "invoiceCode",
+        "invoiceNumber",
+        "invoiceMatched",
+        "amountSar",
+        "customerPhone",
+        "paidAt",
+        "createdByUserId",
+        "saleOperationId",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "websiteorderfulfillments": {
+      "model": "WebsiteOrderFulfillment",
+      "source": "src/lib/db/models/WebsiteOrderFulfillment.ts",
+      "source_sha256": "387d7d3c9a710af5914b37a90cd75ef5a364d8a31048fceea02d5cc344861453",
+      "approved_top_fields": [
+        "orderId",
+        "state",
+        "assignments",
+        "bonusProcessedAt",
+        "_id",
+        "createdAt",
+        "updatedAt"
+      ]
+    }
+  },
+  "excluded": [
+    {
+      "collection": "attribution_contacts",
+      "path": "phone",
+      "reason": "Mongoose select:false"
+    },
+    {
+      "collection": "attribution_contacts",
+      "path": "conflictingPhones",
+      "reason": "Mongoose select:false"
+    },
+    {
+      "collection": "attribution_contacts",
+      "path": "attributionSnapshot",
+      "reason": "Mongoose select:false"
+    },
+    {
+      "collection": "attribution_events",
+      "path": "payloadHash",
+      "reason": "Mongoose select:false"
+    },
+    {
+      "collection": "attribution_customer_locks",
+      "path": "phone",
+      "reason": "Mongoose select:false"
+    },
+    {
+      "collection": "attribution_leads",
+      "path": "context",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "attribution_leads",
+      "path": "sourcePath",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "attribution_leads",
+      "path": "attribution",
+      "reason": "Mongoose select:false"
+    },
+    {
+      "collection": "attribution_sales",
+      "path": "invoiceIds",
+      "reason": "Mongoose select:false"
+    },
+    {
+      "collection": "attribution_sales",
+      "path": "recipientPhones",
+      "reason": "Mongoose select:false"
+    },
+    {
+      "collection": "attribution_sales",
+      "path": "explicitLeadIds",
+      "reason": "Mongoose select:false"
+    },
+    {
+      "collection": "attribution_sales",
+      "path": "reason",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "attribution_sales",
+      "path": "attributionSnapshot",
+      "reason": "Mongoose select:false"
+    },
+    {
+      "collection": "banktransactions",
+      "path": "counterpartyAccount",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "banktransactions",
+      "path": "account",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "banktransactions",
+      "path": "address",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "banktransactions",
+      "path": "reviewMessageId",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "banktransactions",
+      "path": "reviewReason",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "banktransactions",
+      "path": "reviewInvoiceFile",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "bannertexts",
+      "path": "text",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "bonusoperations",
+      "path": "note",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "carfitments",
+      "path": "adminOverrides",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "carfitments",
+      "path": "note",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "carfitmentsources",
+      "path": "key",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "carfitmentsources",
+      "path": "reference",
+      "reason": "Mixed or unresolved type"
+    },
+    {
+      "collection": "carfitmentsources",
+      "path": "fitment",
+      "reason": "Mixed or unresolved type"
+    },
+    {
+      "collection": "carfitmentsources",
+      "path": "hash",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "carfitmentsources",
+      "path": "lastRun.error",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "cashoperations",
+      "path": "note",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "contactmessagelimits",
+      "path": "key",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "counters",
+      "path": "key",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "creditoperations",
+      "path": "note",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "discountcodes",
+      "path": "code",
+      "reason": "redeemable credential"
+    },
+    {
+      "collection": "discountcodes",
+      "path": "derivedFromCode",
+      "reason": "redeemable credential"
+    },
+    {
+      "collection": "discountcodes",
+      "path": "reservedByOwnerKey",
+      "reason": "authentication/routing/signature material"
+    },
+    {
+      "collection": "discountsettings",
+      "path": "key",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "externalfinanceaccountoperations",
+      "path": "account",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "externalfinanceaccountoperations",
+      "path": "note",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "externalfinanceaccountstates",
+      "path": "account",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "herocarouselslides",
+      "path": "desktopImageUrls",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "herocarouselslides",
+      "path": "tabletImageUrls",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "herocarouselslides",
+      "path": "mobileImageUrls",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "herocarouselslides",
+      "path": "desktopImageUrl",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "herocarouselslides",
+      "path": "tabletImageUrl",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "herocarouselslides",
+      "path": "mobileImageUrl",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "herocarouselslides",
+      "path": "href",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "inventorysalecosts",
+      "path": "manualCostOverride",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "inventoryscrapexclusions",
+      "path": "fingerprint",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "inventoryscrapexclusions",
+      "path": "reason",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "inventoryscrapexclusions",
+      "path": "clearedFingerprint",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "inventoryupdatebatches",
+      "path": "supplierAddress",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "inventoryupdatebatches",
+      "path": "invoiceFile",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "inventoryupdatebatches",
+      "path": "manualRequestHash",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "inventoryupdatebatches",
+      "path": "invoiceEdits.before.supplierAddress",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "inventoryupdatebatches",
+      "path": "invoiceEdits.after.supplierAddress",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "managerinvoices",
+      "path": "discountCode",
+      "reason": "redeemable credential"
+    },
+    {
+      "collection": "managerinvoices",
+      "path": "belowCostReviewedByTelegramUserId",
+      "reason": "authentication/routing/signature material"
+    },
+    {
+      "collection": "managerinvoices",
+      "path": "belowCostReviewedByTelegramName",
+      "reason": "authentication/routing/signature material"
+    },
+    {
+      "collection": "managerinvoices",
+      "path": "madaReceiptCheck.reason",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "managerinvoices",
+      "path": "madaReceiptCheck.reasonCode",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "managerinvoices",
+      "path": "madaReceiptCheck.geminiErrorCode",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "managerinvoices",
+      "path": "madaReceiptCheck.reviewReason",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "managerinvoices",
+      "path": "invoiceImageUrl",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "managerinvoices",
+      "path": "carInfoImageUrl",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "managerinvoices",
+      "path": "companyData.address",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "managerinvoices",
+      "path": "depositCheck.reason",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "managerinvoices",
+      "path": "bankCheck.reason",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "managerinvoices",
+      "path": "stcPayCheck.reason",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "managerinvoices",
+      "path": "invoiceFileUrl",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "managerusers",
+      "path": "code",
+      "reason": "manager login code"
+    },
+    {
+      "collection": "managerusers",
+      "path": "telegramBotToken",
+      "reason": "authentication/routing/signature material"
+    },
+    {
+      "collection": "managerusers",
+      "path": "telegramChatId",
+      "reason": "authentication/routing/signature material"
+    },
+    {
+      "collection": "managerusers",
+      "path": "telegramSecondChatId",
+      "reason": "authentication/routing/signature material"
+    },
+    {
+      "collection": "outstandingbalanceoperations",
+      "path": "note",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "paymentmethods",
+      "path": "key",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "paymentmethods",
+      "path": "methods.disableImage",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "pendingcashinventoryreviews",
+      "path": "purchasePayload",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "pendingcashinventoryreviews",
+      "path": "reviewMessageId",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "pendingcashinventoryreviews",
+      "path": "reviewedByTelegramUserId",
+      "reason": "authentication/routing/signature material"
+    },
+    {
+      "collection": "pendingcashinventoryreviews",
+      "path": "reviewedByTelegramName",
+      "reason": "authentication/routing/signature material"
+    },
+    {
+      "collection": "pendingcashinventoryreviews",
+      "path": "processingToken",
+      "reason": "authentication/routing/signature material"
+    },
+    {
+      "collection": "pendingcashinventoryreviews",
+      "path": "error",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "pendingmanagersales",
+      "path": "salePayload",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "pendingmanagersales",
+      "path": "tabbyWebUrl",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "pendingmanagersales",
+      "path": "tabbyQrUrl",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "pendingmanagersales",
+      "path": "tabbySmsResult",
+      "reason": "Mixed or unresolved type"
+    },
+    {
+      "collection": "pendingmanagersales",
+      "path": "tabbyRaw",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "pendingmanagersales",
+      "path": "tamaraCheckoutUrl",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "pendingmanagersales",
+      "path": "tamaraSmsResult",
+      "reason": "Mixed or unresolved type"
+    },
+    {
+      "collection": "pendingmanagersales",
+      "path": "tamaraRaw",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "pendingmanagersales",
+      "path": "finalResult",
+      "reason": "Mixed or unresolved type"
+    },
+    {
+      "collection": "pendingmanagersales",
+      "path": "error",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "pendingmanagersales",
+      "path": "cleanupError",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "products",
+      "path": "image",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "products",
+      "path": "dataAiHint",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "rajhivisabalanceoperations",
+      "path": "note",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "salarypayments",
+      "path": "error",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "saleoperations",
+      "path": "belowCostReviewedByTelegramUserId",
+      "reason": "authentication/routing/signature material"
+    },
+    {
+      "collection": "saleoperations",
+      "path": "belowCostReviewedByTelegramName",
+      "reason": "authentication/routing/signature material"
+    },
+    {
+      "collection": "saleoperations",
+      "path": "madaReceiptCheck.reason",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "saleoperations",
+      "path": "madaReceiptCheck.reasonCode",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "saleoperations",
+      "path": "madaReceiptCheck.geminiErrorCode",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "saleoperations",
+      "path": "madaReceiptCheck.reviewReason",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "saleoperations",
+      "path": "transactionImage",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "saleoperations",
+      "path": "vinImage",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "saleoperations",
+      "path": "vinResult",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "separatedinventorymigrations",
+      "path": "key",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "sitecontents",
+      "path": "key",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "sitecontents",
+      "path": "data",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "smsmessages",
+      "path": "address",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "smsmessages",
+      "path": "body",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "smssyncstates",
+      "path": "lastError",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "smssyncstates",
+      "path": "stcPaySmsCode",
+      "reason": "Mongoose select:false"
+    },
+    {
+      "collection": "technicianinventorymovements",
+      "path": "note",
+      "reason": "free text/private file or bank account"
+    },
+    {
+      "collection": "websiteorderfulfillments",
+      "path": "failureReason",
+      "reason": "free text/private file or bank account"
+    }
+  ]
+}
